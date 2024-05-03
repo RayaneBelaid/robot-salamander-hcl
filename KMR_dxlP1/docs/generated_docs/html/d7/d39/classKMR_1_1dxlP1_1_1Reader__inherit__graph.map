@@ -1,0 +1,5 @@
+<map id="Reader" name="Reader">
+<area shape="rect" id="Node000001" title="Custom Reader class that contains a dynamixel::GroupSyncRead object." alt="" coords="7,79,70,105"/>
+<area shape="rect" id="Node000002" href="$db/db7/classKMR_1_1dxlP1_1_1Handler.html" title="Parent class, to be specialized as a Reader or Writer." alt="" coords="5,5,72,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,46,41,79,36,79,36,46"/>
+</map>

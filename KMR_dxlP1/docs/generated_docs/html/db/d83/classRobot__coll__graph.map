@@ -1,0 +1,23 @@
+<map id="Robot" name="Robot">
+<area shape="rect" id="Node000001" title=" " alt="" coords="355,603,410,629"/>
+<area shape="rect" id="Node000002" href="$d9/d09/classKMR_1_1dxlP1_1_1BaseRobot.html" title="Class that defines a base robot, to be inherited by a robot class in the project." alt="" coords="220,511,305,537"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,544,367,600,364,604,289,548"/>
+<area shape="rect" id="Node000003" href="$d9/d9d/classKMR_1_1dxlP1_1_1Writer.html" title="Custom Writer class that contains a dynamixel::GroupSyncWrite object." alt="" coords="291,360,346,386"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="354,394,366,408,377,448,383,504,385,602,380,603,377,504,372,449,361,411,350,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,395,266,411,257,437,255,464,261,510,256,511,250,464,252,436,261,408,276,392"/>
+<area shape="rect" id="Node000004" href="$db/db7/classKMR_1_1dxlP1_1_1Handler.html" title="Parent class, to be specialized as a Reader or Writer." alt="" coords="285,271,351,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="321,313,321,360,316,360,316,313"/>
+<area shape="rect" id="Node000009" href="$d3/d54/classKMR_1_1dxlP1_1_1Reader.html" title="Custom Reader class that contains a dynamixel::GroupSyncRead object." alt="" coords="439,427,501,453"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="343,306,460,425,456,428,339,310"/>
+<area shape="rect" id="Node000005" href="$d1/d75/classKMR_1_1dxlP1_1_1Hal.html" title="Hardware abstraction layer for Dynamixel motors." alt="" coords="219,183,260,208"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="240,224,238,332,241,400,249,469,260,510,255,511,244,470,236,401,233,332,235,224"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="262,218,309,269,305,273,258,222"/>
+<area shape="rect" id="Node000006" href="$d4/de0/structKMR_1_1dxlP1_1_1Motor.html" title="Structure saving the info of a single motor: both config&#45;wise (ID, model...) and specific to the proj..." alt="" coords="216,94,271,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="244,135,244,144,242,182,237,182,239,144,239,135"/>
+<area shape="rect" id="Node000007" href="$d5/dde/structKMR_1_1dxlP1_1_1Control__modes.html" title="Exhaustive list of all possible control modes for Dynamixel motors." alt="" coords="5,5,114,31"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="51,46,44,82,46,101,53,118,69,137,89,152,135,174,181,186,219,190,218,196,180,191,133,179,86,157,66,141,49,121,41,103,39,82,46,45"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="100,36,219,91,217,96,98,41"/>
+<area shape="rect" id="Node000008" href="$d3/d80/structKMR_1_1dxlP1_1_1Motor__data__field.html" title="Structure saving the info of a data field." alt="" coords="297,94,414,120"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="347,135,328,161,295,181,262,192,260,187,292,176,324,157,343,132"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="478,468,479,510,475,533,467,555,456,571,441,585,411,605,408,600,438,581,452,568,462,552,470,532,474,510,472,468"/>
+</map>

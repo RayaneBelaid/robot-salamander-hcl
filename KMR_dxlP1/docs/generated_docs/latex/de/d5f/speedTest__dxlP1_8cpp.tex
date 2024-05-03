@@ -1,0 +1,258 @@
+\doxysection{/home/katarina/local/\+KMR-\/libraries/\+Dynamixel\+\_\+p1/speed\+Test\+\_\+dxl\+P1.cpp File Reference}
+\hypertarget{speedTest__dxlP1_8cpp}{}\label{speedTest__dxlP1_8cpp}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/speedTest\_dxlP1.cpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/speedTest\_dxlP1.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include "{}robot.\+hpp"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for speed\+Test\+\_\+dxl\+P1.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d62/speedTest__dxlP1_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_a734bbab06e1a9fd2e5522db0221ff6e3}{BAUDRATE}}~1000000
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}~3
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_a8a0fbca4f21d790adf903bbd75baea21}{TEST\+\_\+\+READ1\+BYTE}}~0
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_a79d41e031c79d43bbcd0bc793eeb019e}{TEST\+\_\+\+READ2\+BYTE}}~0
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_ad30e3d76ac0391c1175abbe05cffc382}{TEST\+\_\+\+WRITE1\+BYTE}}~0
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9d4987876f0422c10c0e8308cd12901f}{TEST\+\_\+\+WRITE2\+BYTE}}~0
+\item 
+\#define \mbox{\hyperlink{speedTest__dxlP1_8cpp_a67e576d2e5f0ecd0893ec1fde579259e}{TEST\+\_\+\+MULTITURN\+\_\+\+RESET}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\+\_\+angles}} (\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}, 0)
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\+\_\+leds}} (\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}})
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af64c3b785285d921f7cda3fcbf5e5e01}{fbck\+\_\+enabled}} (\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}})
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a2ba8fedc8f987dfe2e5db2e3632d3edb}{goal\+\_\+angles}} (\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}})
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff}{goal\+\_\+leds}} (\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}, 0)
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_aebce87aae7ee8d91f18e60585c845b75}{angles0}} (\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}, 0)
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_a703b71ebca748f6bfa9841d4bd516134}{write\+Log}} ()
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_a57817cb5f8ef065a85bb5c34e4bb6381}{cont\+Multiturn\+\_\+speed\+Tests}} (\mbox{\hyperlink{classRobot}{Robot}} robot)
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9f7c1d149895375152d343b18c2681f1}{log\+Read2byte}} ()
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_a7352b60771009d6025fd7967383a85cd}{log\+Multiturn}} ()
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_ad3a51341f6515bba03af9750276895e4}{log\+Read1byte}} ()
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_ad3a299d8caa0af10377b3cbd758f05b3}{log\+Write2byte}} ()
+\item 
+void \mbox{\hyperlink{speedTest__dxlP1_8cpp_aaa84d1da9f21923a578c78004e4c6d25}{log\+Write1byte}} ()
+\item 
+double \mbox{\hyperlink{speedTest__dxlP1_8cpp_a5c26b3ff2913a801b97442bff4484b6e}{get\+\_\+delta\+\_\+us}} (struct timespec t2, struct timespec t1)
+\item 
+timespec \mbox{\hyperlink{speedTest__dxlP1_8cpp_a3b5eb47f20077e711874a3d27b8ab138}{time\+\_\+s}} ()
+\item 
+int \mbox{\hyperlink{speedTest__dxlP1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a12d3fdb9534bd44134e5a34a690db183}{write1byte}}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_afdead952b41d617dcbd4a42e436feef4}{write2byte}}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_ae893d8d9125070bb827784a7935267ac}{read1byte}}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a58ae2df732084c36ca47f198ed1e69e6}{read2byte}}
+\item 
+vector$<$ float $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a55ccf3d1e4e528e0a2e0c40bb26f09fd}{multiturn\+\_\+reset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{speedTest__dxlP1_8cpp_a734bbab06e1a9fd2e5522db0221ff6e3}\label{speedTest__dxlP1_8cpp_a734bbab06e1a9fd2e5522db0221ff6e3} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!BAUDRATE@{BAUDRATE}}
+\index{BAUDRATE@{BAUDRATE}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{BAUDRATE}{BAUDRATE}}
+{\footnotesize\ttfamily \#define BAUDRATE~1000000}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}\label{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!NBR\_MOTORS@{NBR\_MOTORS}}
+\index{NBR\_MOTORS@{NBR\_MOTORS}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{NBR\_MOTORS}{NBR\_MOTORS}}
+{\footnotesize\ttfamily \#define NBR\+\_\+\+MOTORS~3}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a67e576d2e5f0ecd0893ec1fde579259e}\label{speedTest__dxlP1_8cpp_a67e576d2e5f0ecd0893ec1fde579259e} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!TEST\_MULTITURN\_RESET@{TEST\_MULTITURN\_RESET}}
+\index{TEST\_MULTITURN\_RESET@{TEST\_MULTITURN\_RESET}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_MULTITURN\_RESET}{TEST\_MULTITURN\_RESET}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+MULTITURN\+\_\+\+RESET~0}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a8a0fbca4f21d790adf903bbd75baea21}\label{speedTest__dxlP1_8cpp_a8a0fbca4f21d790adf903bbd75baea21} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!TEST\_READ1BYTE@{TEST\_READ1BYTE}}
+\index{TEST\_READ1BYTE@{TEST\_READ1BYTE}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_READ1BYTE}{TEST\_READ1BYTE}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+READ1\+BYTE~0}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a79d41e031c79d43bbcd0bc793eeb019e}\label{speedTest__dxlP1_8cpp_a79d41e031c79d43bbcd0bc793eeb019e} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!TEST\_READ2BYTE@{TEST\_READ2BYTE}}
+\index{TEST\_READ2BYTE@{TEST\_READ2BYTE}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_READ2BYTE}{TEST\_READ2BYTE}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+READ2\+BYTE~0}
+
+\Hypertarget{speedTest__dxlP1_8cpp_ad30e3d76ac0391c1175abbe05cffc382}\label{speedTest__dxlP1_8cpp_ad30e3d76ac0391c1175abbe05cffc382} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!TEST\_WRITE1BYTE@{TEST\_WRITE1BYTE}}
+\index{TEST\_WRITE1BYTE@{TEST\_WRITE1BYTE}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_WRITE1BYTE}{TEST\_WRITE1BYTE}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+WRITE1\+BYTE~0}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a9d4987876f0422c10c0e8308cd12901f}\label{speedTest__dxlP1_8cpp_a9d4987876f0422c10c0e8308cd12901f} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!TEST\_WRITE2BYTE@{TEST\_WRITE2BYTE}}
+\index{TEST\_WRITE2BYTE@{TEST\_WRITE2BYTE}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_WRITE2BYTE}{TEST\_WRITE2BYTE}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+WRITE2\+BYTE~0}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{speedTest__dxlP1_8cpp_aebce87aae7ee8d91f18e60585c845b75}\label{speedTest__dxlP1_8cpp_aebce87aae7ee8d91f18e60585c845b75} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!angles0@{angles0}}
+\index{angles0@{angles0}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{angles0()}{angles0()}}
+{\footnotesize\ttfamily vector$<$ float $>$ angles0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a57817cb5f8ef065a85bb5c34e4bb6381}\label{speedTest__dxlP1_8cpp_a57817cb5f8ef065a85bb5c34e4bb6381} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!contMultiturn\_speedTests@{contMultiturn\_speedTests}}
+\index{contMultiturn\_speedTests@{contMultiturn\_speedTests}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{contMultiturn\_speedTests()}{contMultiturn\_speedTests()}}
+{\footnotesize\ttfamily void cont\+Multiturn\+\_\+speed\+Tests (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRobot}{Robot}}}]{robot }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}\label{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!fbck\_angles@{fbck\_angles}}
+\index{fbck\_angles@{fbck\_angles}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{fbck\_angles()}{fbck\_angles()}}
+{\footnotesize\ttfamily vector$<$ float $>$ fbck\+\_\+angles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_af64c3b785285d921f7cda3fcbf5e5e01}\label{speedTest__dxlP1_8cpp_af64c3b785285d921f7cda3fcbf5e5e01} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!fbck\_enabled@{fbck\_enabled}}
+\index{fbck\_enabled@{fbck\_enabled}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{fbck\_enabled()}{fbck\_enabled()}}
+{\footnotesize\ttfamily vector$<$ float $>$ fbck\+\_\+enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}\label{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!fbck\_leds@{fbck\_leds}}
+\index{fbck\_leds@{fbck\_leds}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{fbck\_leds()}{fbck\_leds()}}
+{\footnotesize\ttfamily vector$<$ float $>$ fbck\+\_\+leds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a5c26b3ff2913a801b97442bff4484b6e}\label{speedTest__dxlP1_8cpp_a5c26b3ff2913a801b97442bff4484b6e} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!get\_delta\_us@{get\_delta\_us}}
+\index{get\_delta\_us@{get\_delta\_us}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_delta\_us()}{get\_delta\_us()}}
+{\footnotesize\ttfamily double get\+\_\+delta\+\_\+us (\begin{DoxyParamCaption}\item[{struct timespec}]{t2,  }\item[{struct timespec}]{t1 }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a2ba8fedc8f987dfe2e5db2e3632d3edb}\label{speedTest__dxlP1_8cpp_a2ba8fedc8f987dfe2e5db2e3632d3edb} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!goal\_angles@{goal\_angles}}
+\index{goal\_angles@{goal\_angles}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{goal\_angles()}{goal\_angles()}}
+{\footnotesize\ttfamily vector$<$ float $>$ goal\+\_\+angles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff}\label{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!goal\_leds@{goal\_leds}}
+\index{goal\_leds@{goal\_leds}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{goal\_leds()}{goal\_leds()}}
+{\footnotesize\ttfamily vector$<$ int $>$ goal\+\_\+leds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{speedTest__dxlP1_8cpp_a4b4cc940f5df9bc2985a253d31a94a12}{NBR\+\_\+\+MOTORS}}}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a7352b60771009d6025fd7967383a85cd}\label{speedTest__dxlP1_8cpp_a7352b60771009d6025fd7967383a85cd} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!logMultiturn@{logMultiturn}}
+\index{logMultiturn@{logMultiturn}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{logMultiturn()}{logMultiturn()}}
+{\footnotesize\ttfamily void log\+Multiturn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_ad3a51341f6515bba03af9750276895e4}\label{speedTest__dxlP1_8cpp_ad3a51341f6515bba03af9750276895e4} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!logRead1byte@{logRead1byte}}
+\index{logRead1byte@{logRead1byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{logRead1byte()}{logRead1byte()}}
+{\footnotesize\ttfamily void log\+Read1byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a9f7c1d149895375152d343b18c2681f1}\label{speedTest__dxlP1_8cpp_a9f7c1d149895375152d343b18c2681f1} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!logRead2byte@{logRead2byte}}
+\index{logRead2byte@{logRead2byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{logRead2byte()}{logRead2byte()}}
+{\footnotesize\ttfamily void log\+Read2byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_aaa84d1da9f21923a578c78004e4c6d25}\label{speedTest__dxlP1_8cpp_aaa84d1da9f21923a578c78004e4c6d25} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!logWrite1byte@{logWrite1byte}}
+\index{logWrite1byte@{logWrite1byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{logWrite1byte()}{logWrite1byte()}}
+{\footnotesize\ttfamily void log\+Write1byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_ad3a299d8caa0af10377b3cbd758f05b3}\label{speedTest__dxlP1_8cpp_ad3a299d8caa0af10377b3cbd758f05b3} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!logWrite2byte@{logWrite2byte}}
+\index{logWrite2byte@{logWrite2byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{logWrite2byte()}{logWrite2byte()}}
+{\footnotesize\ttfamily void log\+Write2byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{speedTest__dxlP1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!main@{main}}
+\index{main@{main}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a3b5eb47f20077e711874a3d27b8ab138}\label{speedTest__dxlP1_8cpp_a3b5eb47f20077e711874a3d27b8ab138} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!time\_s@{time\_s}}
+\index{time\_s@{time\_s}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{time\_s()}{time\_s()}}
+{\footnotesize\ttfamily timespec time\+\_\+s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a703b71ebca748f6bfa9841d4bd516134}\label{speedTest__dxlP1_8cpp_a703b71ebca748f6bfa9841d4bd516134} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!writeLog@{writeLog}}
+\index{writeLog@{writeLog}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{writeLog()}{writeLog()}}
+{\footnotesize\ttfamily void write\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{speedTest__dxlP1_8cpp_a55ccf3d1e4e528e0a2e0c40bb26f09fd}\label{speedTest__dxlP1_8cpp_a55ccf3d1e4e528e0a2e0c40bb26f09fd} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!multiturn\_reset@{multiturn\_reset}}
+\index{multiturn\_reset@{multiturn\_reset}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{multiturn\_reset}{multiturn\_reset}}
+{\footnotesize\ttfamily vector$<$float$>$ multiturn\+\_\+reset}
+
+\Hypertarget{speedTest__dxlP1_8cpp_ae893d8d9125070bb827784a7935267ac}\label{speedTest__dxlP1_8cpp_ae893d8d9125070bb827784a7935267ac} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!read1byte@{read1byte}}
+\index{read1byte@{read1byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{read1byte}{read1byte}}
+{\footnotesize\ttfamily vector$<$float$>$ read1byte}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a58ae2df732084c36ca47f198ed1e69e6}\label{speedTest__dxlP1_8cpp_a58ae2df732084c36ca47f198ed1e69e6} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!read2byte@{read2byte}}
+\index{read2byte@{read2byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{read2byte}{read2byte}}
+{\footnotesize\ttfamily vector$<$float$>$ read2byte}
+
+\Hypertarget{speedTest__dxlP1_8cpp_a12d3fdb9534bd44134e5a34a690db183}\label{speedTest__dxlP1_8cpp_a12d3fdb9534bd44134e5a34a690db183} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!write1byte@{write1byte}}
+\index{write1byte@{write1byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{write1byte}{write1byte}}
+{\footnotesize\ttfamily vector$<$float$>$ write1byte}
+
+\Hypertarget{speedTest__dxlP1_8cpp_afdead952b41d617dcbd4a42e436feef4}\label{speedTest__dxlP1_8cpp_afdead952b41d617dcbd4a42e436feef4} 
+\index{speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}!write2byte@{write2byte}}
+\index{write2byte@{write2byte}!speedTest\_dxlP1.cpp@{speedTest\_dxlP1.cpp}}
+\doxysubsubsection{\texorpdfstring{write2byte}{write2byte}}
+{\footnotesize\ttfamily vector$<$float$>$ write2byte}
+

@@ -1,0 +1,51 @@
+\doxysection{KMR\+\_\+dxl\+P1\+\_\+robot.\+hpp}
+\hypertarget{KMR__dxlP1__robot_8hpp_source}{}\label{KMR__dxlP1__robot_8hpp_source}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_robot.hpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_robot.hpp}}
+\mbox{\hyperlink{KMR__dxlP1__robot_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ KMR\_DXLP1\_ROBOT\_HPP}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ KMR\_DXLP1\_ROBOT\_HPP}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KMR__dxlP1__writer_8hpp}{KMR\_dxlP1\_writer.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KMR__dxlP1__reader_8hpp}{KMR\_dxlP1\_reader.hpp}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceKMR_1_1dxlP1}{KMR::dxlP1}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{BaseRobot}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ dynamixel::PortHandler\ \ \ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a93b185c722b9f661772caa4b4f4b34e1}{portHandler\_}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ dynamixel::PacketHandler\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aa72e6c819f0d93da403901c13133e613}{packetHandler\_}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ad574ce7354b5147c93406752bd12abf4}{m\_motor\_enabler}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a8c3c2fbac9e3bbd523131eacd14efa5d}{m\_CW\_limit}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aac65b75303e1cb6ecd3451418a0baa40}{m\_CCW\_limit}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_af92fe6920df160e08b07a2464cada4c7}{m\_torque\_control}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_acaa72fc3d380506df9155b5f66b74f49}{init\_comm}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *port\_name,\ \textcolor{keywordtype}{int}\ baudrate,\ \textcolor{keywordtype}{float}\ protocol\_version);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ada7e2ecd7e36f8ed7e09ac953f4b0b34}{check\_comm}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a8fd515216f787718265d67c717ff8b36}{setMultiturnControl\_singleMotor}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a72a23793b7ed92a61f2fd59f8280dd60}{setPositionControl\_singleMotor}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a139b55dd60f5dc524f5ec2af46da7023}{setTorqueControl\_singleMotor}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ on\_off);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a1ef1e1386c6cfd84af994b409ac636b3}{scanned\_motor\_models}};\ \ \textcolor{comment}{//\ Dynamixel-\/defined\ model\ numbers\ of\ motors\ in\ the\ robot}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\_hal}};\ \ \textcolor{comment}{//\ to\ put\ private?\ @todo}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aca9ff4227133e3c5a16050a850e997c8}{m\_all\_IDs}};\ \textcolor{comment}{//\ All\ motor\ IDs\ in\ the\ robot}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{BaseRobot}}(std::vector<int>\ all\_ids,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *port\_name,\ \textcolor{keywordtype}{int}\ baudrate,\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}\ hal);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_acf9098f7d433232086d954843f705c3a}{\string~BaseRobot}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_af272901f64f8137520f950dc65d8db0e}{enableMotors}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aff7e4b07629ef8928ba849e4f8afe158}{enableMotors}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a674c201e68b73da999969d8b1232954f}{disableMotors}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a16a9da198d02b8a6e92e8b4118a19ea5}{disableMotors}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a35a1d32d53c7d087ac744bde8f6c4fc9}{resetMultiturnMotors}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a35a1d32d53c7d087ac744bde8f6c4fc9}{resetMultiturnMotors}}(\textcolor{keywordtype}{int}\ sleep\_time\_us);}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

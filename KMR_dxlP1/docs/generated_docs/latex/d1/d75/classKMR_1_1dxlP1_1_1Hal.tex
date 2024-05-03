@@ -1,0 +1,451 @@
+\doxysection{Hal Class Reference}
+\hypertarget{classKMR_1_1dxlP1_1_1Hal}{}\label{classKMR_1_1dxlP1_1_1Hal}\index{Hal@{Hal}}
+
+
+Hardware abstraction layer for Dynamixel motors.  
+
+
+
+
+{\ttfamily \#include $<$KMR\+\_\+dxl\+P1\+\_\+hal.\+hpp$>$}
+
+
+
+Collaboration diagram for Hal\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d14/classKMR_1_1dxlP1_1_1Hal__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a7adac80c8c7c2d0c48b93ae9a75bd3cb}{Hal}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_ab3f66c6a63feaee2a55a43699712013b}{\texorpdfstring{$\sim$}{\string~}\+Hal}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal}. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a9006f80377e7c316aa2220834e5bc277}{init}} (char \texorpdfstring{$\ast$}{*}motor\+\_\+config\+\_\+file, char \texorpdfstring{$\ast$}{*}path\+\_\+to\+\_\+\+KMR\+\_\+dxl)
+\begin{DoxyCompactList}\small\item\em Initialize the hal\+: parse motor config file and create the control table. To call immediately after the constructor ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aeccf49fff0727ceb7e25a2880df944f8}{get\+\_\+\+ID\+\_\+list\+\_\+from\+\_\+motors\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Extract the list of all motor IDs from the motors list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a82ab54d41e69f9f5e59b9b50407fa068}{get\+Control\+Parameters\+From\+ID}} (int id, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} field)
+\begin{DoxyCompactList}\small\item\em Get control parameters of a specific control field from motor ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a860e649b502bf80e64eeefd8bb982d4c}{get\+Motors\+List\+Index\+From\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a motor\textquotesingle{}s list index from its ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a19d631958816ecf147ba45840a878449}{get\+Motor\+From\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a motor\textquotesingle{}s info structure from motor ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_adf85066d3d88b2f27f0ffb39fbcdd91e}{update\+Reset\+Status}} (int id, int status)
+\begin{DoxyCompactList}\small\item\em Update a motor\textquotesingle{}s "{}to reset"{} status in multiturn mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a21e64c053698867005f465f10836c427}{m\+\_\+tot\+\_\+nbr\+\_\+motors}}
+\item 
+\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aad55dcd1593c39d8ba118f5992697c47}{m\+\_\+motors\+\_\+list}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aca9ff4227133e3c5a16050a850e997c8}{m\+\_\+all\+\_\+\+IDs}}
+\item 
+\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_ac898753b2114cab087872bed5f5c369d}{m\+\_\+control\+\_\+table}}
+\item 
+\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\+\_\+modes}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aa4ff4182250e5dbc198aa3079e6771d5}{m\+\_\+control\+Modes\+Per\+Model}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aeee5c5a15b1e73985886f2fe758d749d}{populate\+\_\+control\+\_\+table}} (char \texorpdfstring{$\ast$}{*}path\+\_\+to\+\_\+\+KMR\+\_\+dxl)
+\begin{DoxyCompactList}\small\item\em Populate the control table\textquotesingle{}s data fields for all motor models in the project. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a4e16b2fe6541a25046405ab64bd80f22}{parse\+\_\+motor\+\_\+config}} (char \texorpdfstring{$\ast$}{*}config\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Parse the motor configuration file and populate the list of motors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_abbb3d6454819ec1b0846a20ff53fb66b}{string2\+Motors\+\_\+models}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Convert a string to Motors\+\_\+models enumerate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a7c84b0b3dd181a18d7c607ea0477e468}{string2\+Fields}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Convert a string to Fields enumerate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_af9cc0889eb13fde7a78ab83e2ee8049e}{data\+Node2\+Motor\+\_\+data\+\_\+field}} (\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node}{Data\+\_\+node}} \&data\+\_\+node, \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}} \&motor\+\_\+data\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Convert a \doxylink{structKMR_1_1dxlP1_1_1Data__node}{Data\+\_\+node} instance to a \doxylink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aade7a1ebf1ad09991420b525ff310321}{motor\+Node2\+Motor}} (\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\+\_\+node}} \&motor\+\_\+node, \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}} \&motor)
+\begin{DoxyCompactList}\small\item\em Convert a \doxylink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\+\_\+node} instance to a \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a89b6692f978819bd144097c1bd0fe801}{update\+\_\+unique\+\_\+models\+\_\+list}} (std\+::string motor\+\_\+model\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Create the list of unique motor models used in the robot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a9726553df1343b81a296e34ba64fe359}{get\+Model\+From\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Get motor model from motor ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a6c69e4bbb65c8206a3f243b90d7f11f0}{save\+Control\+Values\+To\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em For each motor, save all operating modes control values. ~\newline
+ Needed for resetting in multiturn mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a8173074f6ef29161f12bf482af57ece8}{m\+\_\+unique\+\_\+motor\+\_\+models\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hardware abstraction layer for Dynamixel motors. 
+
+The lowest-\/level element in the library. The \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal} class serves primarily as an abstraction layer, providing high-\/level functions to get the Dynamixel control table addresses by creating a control table. ~\newline
+ It also parses the project\textquotesingle{}s motors configuration file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a7adac80c8c7c2d0c48b93ae9a75bd3cb}\label{classKMR_1_1dxlP1_1_1Hal_a7adac80c8c7c2d0c48b93ae9a75bd3cb} 
+\index{Hal@{Hal}!Hal@{Hal}}
+\index{Hal@{Hal}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{Hal()}{Hal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal}. 
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_ab3f66c6a63feaee2a55a43699712013b}\label{classKMR_1_1dxlP1_1_1Hal_ab3f66c6a63feaee2a55a43699712013b} 
+\index{Hal@{Hal}!````~Hal@{\texorpdfstring{$\sim$}{\string~}Hal}}
+\index{````~Hal@{\texorpdfstring{$\sim$}{\string~}Hal}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Hal()}{\string~Hal()}}
+{\footnotesize\ttfamily \texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_af9cc0889eb13fde7a78ab83e2ee8049e}\label{classKMR_1_1dxlP1_1_1Hal_af9cc0889eb13fde7a78ab83e2ee8049e} 
+\index{Hal@{Hal}!dataNode2Motor\_data\_field@{dataNode2Motor\_data\_field}}
+\index{dataNode2Motor\_data\_field@{dataNode2Motor\_data\_field}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{dataNode2Motor\_data\_field()}{dataNode2Motor\_data\_field()}}
+{\footnotesize\ttfamily void data\+Node2\+Motor\+\_\+data\+\_\+field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node}{Data\+\_\+node}} \&}]{data\+\_\+node,  }\item[{\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}} \&}]{motor\+\_\+data\+\_\+field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert a \doxylink{structKMR_1_1dxlP1_1_1Data__node}{Data\+\_\+node} instance to a \doxylink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field} instance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data\+\_\+node} & \doxylink{structKMR_1_1dxlP1_1_1Data__node}{Data\+\_\+node} instance to be converted \\
+\hline
+\mbox{\texttt{ out}}  & {\em motor\+\_\+data\+\_\+field} & \doxylink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field} instance to store the info from the node \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_aeccf49fff0727ceb7e25a2880df944f8}\label{classKMR_1_1dxlP1_1_1Hal_aeccf49fff0727ceb7e25a2880df944f8} 
+\index{Hal@{Hal}!get\_ID\_list\_from\_motors\_list@{get\_ID\_list\_from\_motors\_list}}
+\index{get\_ID\_list\_from\_motors\_list@{get\_ID\_list\_from\_motors\_list}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{get\_ID\_list\_from\_motors\_list()}{get\_ID\_list\_from\_motors\_list()}}
+{\footnotesize\ttfamily void get\+\_\+\+ID\+\_\+list\+\_\+from\+\_\+motors\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Extract the list of all motor IDs from the motors list. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a82ab54d41e69f9f5e59b9b50407fa068}\label{classKMR_1_1dxlP1_1_1Hal_a82ab54d41e69f9f5e59b9b50407fa068} 
+\index{Hal@{Hal}!getControlParametersFromID@{getControlParametersFromID}}
+\index{getControlParametersFromID@{getControlParametersFromID}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{getControlParametersFromID()}{getControlParametersFromID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}} get\+Control\+Parameters\+From\+ID (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}}]{field }\end{DoxyParamCaption})}
+
+
+
+Get control parameters of a specific control field from motor ID. 
+
+\begin{DoxyNote}{Note}
+Vital function 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID of the query motor \\
+\hline
+\mbox{\texttt{ in}}  & {\em field} & Control field of the query \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Control} & parameters of the query field \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a9726553df1343b81a296e34ba64fe359}\label{classKMR_1_1dxlP1_1_1Hal_a9726553df1343b81a296e34ba64fe359} 
+\index{Hal@{Hal}!getModelFromID@{getModelFromID}}
+\index{getModelFromID@{getModelFromID}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{getModelFromID()}{getModelFromID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} get\+Model\+From\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get motor model from motor ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID of the query motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Model} & of the query motor \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a19d631958816ecf147ba45840a878449}\label{classKMR_1_1dxlP1_1_1Hal_a19d631958816ecf147ba45840a878449} 
+\index{Hal@{Hal}!getMotorFromID@{getMotorFromID}}
+\index{getMotorFromID@{getMotorFromID}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{getMotorFromID()}{getMotorFromID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}} get\+Motor\+From\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get a motor\textquotesingle{}s info structure from motor ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID of the query motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} structure of the query motor \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a860e649b502bf80e64eeefd8bb982d4c}\label{classKMR_1_1dxlP1_1_1Hal_a860e649b502bf80e64eeefd8bb982d4c} 
+\index{Hal@{Hal}!getMotorsListIndexFromID@{getMotorsListIndexFromID}}
+\index{getMotorsListIndexFromID@{getMotorsListIndexFromID}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{getMotorsListIndexFromID()}{getMotorsListIndexFromID()}}
+{\footnotesize\ttfamily int get\+Motors\+List\+Index\+From\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get a motor\textquotesingle{}s list index from its ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID of the query motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Index} & of the query motor \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a9006f80377e7c316aa2220834e5bc277}\label{classKMR_1_1dxlP1_1_1Hal_a9006f80377e7c316aa2220834e5bc277} 
+\index{Hal@{Hal}!init@{init}}
+\index{init@{init}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily vector$<$ int $>$ init (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{motor\+\_\+config\+\_\+file,  }\item[{char \texorpdfstring{$\ast$}{*}}]{path\+\_\+to\+\_\+\+KMR\+\_\+dxl }\end{DoxyParamCaption})}
+
+
+
+Initialize the hal\+: parse motor config file and create the control table. To call immediately after the constructor ~\newline
+ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor\+\_\+config\+\_\+file} & Configuration file of the motors in the project \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of all motor IDs 
+\end{DoxyReturn}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_aade7a1ebf1ad09991420b525ff310321}\label{classKMR_1_1dxlP1_1_1Hal_aade7a1ebf1ad09991420b525ff310321} 
+\index{Hal@{Hal}!motorNode2Motor@{motorNode2Motor}}
+\index{motorNode2Motor@{motorNode2Motor}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{motorNode2Motor()}{motorNode2Motor()}}
+{\footnotesize\ttfamily void motor\+Node2\+Motor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\+\_\+node}} \&}]{motor\+\_\+node,  }\item[{\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}} \&}]{motor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert a \doxylink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\+\_\+node} instance to a \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} instance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor\+\_\+node} & \doxylink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\+\_\+node} instance to be converted \\
+\hline
+\mbox{\texttt{ out}}  & {\em motor} & \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} instance to store the info from the node \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a4e16b2fe6541a25046405ab64bd80f22}\label{classKMR_1_1dxlP1_1_1Hal_a4e16b2fe6541a25046405ab64bd80f22} 
+\index{Hal@{Hal}!parse\_motor\_config@{parse\_motor\_config}}
+\index{parse\_motor\_config@{parse\_motor\_config}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{parse\_motor\_config()}{parse\_motor\_config()}}
+{\footnotesize\ttfamily void parse\+\_\+motor\+\_\+config (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{config\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parse the motor configuration file and populate the list of motors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config\+\_\+file} & Yaml config file for the motors in the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_aeee5c5a15b1e73985886f2fe758d749d}\label{classKMR_1_1dxlP1_1_1Hal_aeee5c5a15b1e73985886f2fe758d749d} 
+\index{Hal@{Hal}!populate\_control\_table@{populate\_control\_table}}
+\index{populate\_control\_table@{populate\_control\_table}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{populate\_control\_table()}{populate\_control\_table()}}
+{\footnotesize\ttfamily void populate\+\_\+control\+\_\+table (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{path\+\_\+to\+\_\+\+KMR\+\_\+dxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Populate the control table\textquotesingle{}s data fields for all motor models in the project. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path\+\_\+to\+\_\+\+KMR\+\_\+dxl} & Path from the working directory (build) to this library\textquotesingle{}s folder \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a6c69e4bbb65c8206a3f243b90d7f11f0}\label{classKMR_1_1dxlP1_1_1Hal_a6c69e4bbb65c8206a3f243b90d7f11f0} 
+\index{Hal@{Hal}!saveControlValuesToMotors@{saveControlValuesToMotors}}
+\index{saveControlValuesToMotors@{saveControlValuesToMotors}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{saveControlValuesToMotors()}{saveControlValuesToMotors()}}
+{\footnotesize\ttfamily void save\+Control\+Values\+To\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+For each motor, save all operating modes control values. ~\newline
+ Needed for resetting in multiturn mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a7c84b0b3dd181a18d7c607ea0477e468}\label{classKMR_1_1dxlP1_1_1Hal_a7c84b0b3dd181a18d7c607ea0477e468} 
+\index{Hal@{Hal}!string2Fields@{string2Fields}}
+\index{string2Fields@{string2Fields}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{string2Fields()}{string2Fields()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} string2\+Fields (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert a string to Fields enumerate. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & String to be converted into the enumerate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Fields} & enumerate value \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_abbb3d6454819ec1b0846a20ff53fb66b}\label{classKMR_1_1dxlP1_1_1Hal_abbb3d6454819ec1b0846a20ff53fb66b} 
+\index{Hal@{Hal}!string2Motors\_models@{string2Motors\_models}}
+\index{string2Motors\_models@{string2Motors\_models}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{string2Motors\_models()}{string2Motors\_models()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} string2\+Motors\+\_\+models (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert a string to Motors\+\_\+models enumerate. 
+
+\begin{DoxyAttention}{Attention}
+This function needs to be updated if new motor model added, as well as the enum 
+\end{DoxyAttention}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & String to be converted into the enumerate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Motors\+\_\+models} & enumerate value \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a89b6692f978819bd144097c1bd0fe801}\label{classKMR_1_1dxlP1_1_1Hal_a89b6692f978819bd144097c1bd0fe801} 
+\index{Hal@{Hal}!update\_unique\_models\_list@{update\_unique\_models\_list}}
+\index{update\_unique\_models\_list@{update\_unique\_models\_list}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{update\_unique\_models\_list()}{update\_unique\_models\_list()}}
+{\footnotesize\ttfamily void update\+\_\+unique\+\_\+models\+\_\+list (\begin{DoxyParamCaption}\item[{std\+::string}]{motor\+\_\+model\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the list of unique motor models used in the robot. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor\+\_\+model\+\_\+string} & Model of the currently querried motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_adf85066d3d88b2f27f0ffb39fbcdd91e}\label{classKMR_1_1dxlP1_1_1Hal_adf85066d3d88b2f27f0ffb39fbcdd91e} 
+\index{Hal@{Hal}!updateResetStatus@{updateResetStatus}}
+\index{updateResetStatus@{updateResetStatus}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{updateResetStatus()}{updateResetStatus()}}
+{\footnotesize\ttfamily void update\+Reset\+Status (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{status }\end{DoxyParamCaption})}
+
+
+
+Update a motor\textquotesingle{}s "{}to reset"{} status in multiturn mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID of the query motor \\
+\hline
+\mbox{\texttt{ in}}  & {\em status} & Boolean\+: 1 if need to reset, 0 if not \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_aca9ff4227133e3c5a16050a850e997c8}\label{classKMR_1_1dxlP1_1_1Hal_aca9ff4227133e3c5a16050a850e997c8} 
+\index{Hal@{Hal}!m\_all\_IDs@{m\_all\_IDs}}
+\index{m\_all\_IDs@{m\_all\_IDs}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{m\_all\_IDs}{m\_all\_IDs}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ m\+\_\+all\+\_\+\+IDs}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_ac898753b2114cab087872bed5f5c369d}\label{classKMR_1_1dxlP1_1_1Hal_ac898753b2114cab087872bed5f5c369d} 
+\index{Hal@{Hal}!m\_control\_table@{m\_control\_table}}
+\index{m\_control\_table@{m\_control\_table}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{m\_control\_table}{m\_control\_table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} m\+\_\+control\+\_\+table}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_aa4ff4182250e5dbc198aa3079e6771d5}\label{classKMR_1_1dxlP1_1_1Hal_aa4ff4182250e5dbc198aa3079e6771d5} 
+\index{Hal@{Hal}!m\_controlModesPerModel@{m\_controlModesPerModel}}
+\index{m\_controlModesPerModel@{m\_controlModesPerModel}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{m\_controlModesPerModel}{m\_controlModesPerModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\+\_\+modes}}\texorpdfstring{$\ast$}{*} m\+\_\+control\+Modes\+Per\+Model}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_aad55dcd1593c39d8ba118f5992697c47}\label{classKMR_1_1dxlP1_1_1Hal_aad55dcd1593c39d8ba118f5992697c47} 
+\index{Hal@{Hal}!m\_motors\_list@{m\_motors\_list}}
+\index{m\_motors\_list@{m\_motors\_list}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{m\_motors\_list}{m\_motors\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}}\texorpdfstring{$\ast$}{*} m\+\_\+motors\+\_\+list}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a21e64c053698867005f465f10836c427}\label{classKMR_1_1dxlP1_1_1Hal_a21e64c053698867005f465f10836c427} 
+\index{Hal@{Hal}!m\_tot\_nbr\_motors@{m\_tot\_nbr\_motors}}
+\index{m\_tot\_nbr\_motors@{m\_tot\_nbr\_motors}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{m\_tot\_nbr\_motors}{m\_tot\_nbr\_motors}}
+{\footnotesize\ttfamily int m\+\_\+tot\+\_\+nbr\+\_\+motors}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Hal_a8173074f6ef29161f12bf482af57ece8}\label{classKMR_1_1dxlP1_1_1Hal_a8173074f6ef29161f12bf482af57ece8} 
+\index{Hal@{Hal}!m\_unique\_motor\_models\_list@{m\_unique\_motor\_models\_list}}
+\index{m\_unique\_motor\_models\_list@{m\_unique\_motor\_models\_list}!Hal@{Hal}}
+\doxysubsubsection{\texorpdfstring{m\_unique\_motor\_models\_list}{m\_unique\_motor\_models\_list}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ m\+\_\+unique\+\_\+motor\+\_\+models\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+

@@ -1,0 +1,32 @@
+\chapter{Introduction}
+\hypertarget{index}{}\label{index}\index{Introduction@{Introduction}}
+\label{index_mainpage}%
+\Hypertarget{index_mainpage}%
+
+
+This library provides an easy way to use Dynamixel motors in a project, in {\bfseries{protocol 1}}. ~\newline
+ Its main strength is the abstraction of adresses\+: the user does not need to concern themselves with manually getting or inputting addresses from the motors\textquotesingle{} control tables, this is done automatically by the library. Similarly, in case of a handler (reader or writer) needing to work through indirect addresses, the library automatically takes care of it.\hypertarget{index_autotoc_md0}{}\doxysection{\texorpdfstring{Working concept}{Working concept}}\label{index_autotoc_md0}
+Instead of having to manually create Dynamixel\textquotesingle{}s Group\+Sync\+Write and Group\+Sync\+Read objects and inputting the required addresses and byte lengths of their control fields, everything is done through this library\textquotesingle{}s KMR\+::dxl\+::\+Reader and KMR\+::dxl\+::\+Writer classes.
+
+The KMR\+::dxl\+::\+Base\+Robot class provides a basis to be inherited by a \doxylink{classRobot}{Robot} class specific to the project. Base\+Robot contains general-\/use functions such as enabling/disabling motors and resetting them in multiturn control mode. ~\newline
+The user needs to create custom Reader and Writer objects in their child \doxylink{classRobot}{Robot} class, handling the fields they need, as well as their reading/writing functions. Those functions are very straightforward to implement.
+
+This library is written in C++. ~\newline
+ It uses SI units, the only exception being temperature expressed in °C instead of Kelvins.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Links}{Links}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Repository\+: \href{https://github.com/KM-RoBoTa/KMR_dxl}{\texttt{ https\+://github.\+com/\+KM-\/\+Ro\+Bo\+Ta/\+KMR\+\_\+dxl}}
+\item How to \doxysectlink{setup}{setup}{0}
+\item How to \doxysectlink{how-to-use}{use}{0}
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{About}{About}}\label{index_autotoc_md2}
+KM-\/\+Ro\+Bo\+Ta sarl\textquotesingle{}s KMR\+\_\+dxl library to facilitate Dynamixel control.\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Authors}{Authors}}\label{index_autotoc_md3}
+Library written by Katarina Lichardova\+: \href{mailto:katarina.lichardova@km-robota.com}{\texttt{ katarina.\+lichardova@km-\/robota.\+com}}
+
+based on code from\+:
+\begin{DoxyItemize}
+\item Laura Paez\+: \href{mailto:laura.paez@km-robota.com}{\texttt{ laura.\+paez@km-\/robota.\+com}}
+\item Kamilo Melo\+: \href{mailto:kamilo.melo@km-robota.com}{\texttt{ kamilo.\+melo@km-\/robota.\+com}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Copyright}{Copyright}}\label{index_autotoc_md4}
+Copyright 2021-\/2023, Laura Paez Coy and Kamilo Melo. ~\newline
+This code is under MIT licence\+: \href{https://opensource.org/licenses/MIT}{\texttt{ https\+://opensource.\+org/licenses/\+MIT}}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Not yet implemented}{Not yet implemented}}\label{index_autotoc_md5}
+Currently only contains control values for MX64-\/R. 

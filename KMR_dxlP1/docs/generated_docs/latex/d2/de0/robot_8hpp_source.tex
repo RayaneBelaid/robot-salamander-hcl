@@ -1,0 +1,36 @@
+\doxysection{robot.\+hpp}
+\hypertarget{robot_8hpp_source}{}\label{robot_8hpp_source}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/header/robot.hpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/header/robot.hpp}}
+\mbox{\hyperlink{robot_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ ROBOT\_HPP}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ ROBOT\_HPP}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KMR__dxlP1__robot_8hpp}{KMR\_dxlP1\_robot.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRobot}{Robot}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{KMR::dxlP1::BaseRobot}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{KMR::dxlP1::Writer}}\ *\mbox{\hyperlink{classRobot_a2d028e36d975089678117edb1dd550d2}{m\_writer}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{KMR::dxlP1::Writer}}\ *\mbox{\hyperlink{classRobot_a8974feeff4cb3f34ca07cba72fec389e}{m\_led\_writer}};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR::dxlP1::Reader}}\ *\mbox{\hyperlink{classRobot_a2839307214a5e0165201451a78ba3e0f}{m\_reader}};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR::dxlP1::Reader}}\ *\mbox{\hyperlink{classRobot_ab64b69cde5aee02216942a5aed84aeae}{m\_enabled\_reader}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR::dxlP1::Reader}}\ *\mbox{\hyperlink{classRobot_acffea6847553069490d5f872018cc9a0}{m\_led\_reader}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR::dxlP1::Reader}}\ *\mbox{\hyperlink{classRobot_a6f9f4c456981b7f488fecb320ff7d04b}{m\_CW\_reader}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}(std::vector<int>\ all\_ids,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *port\_name,\ \textcolor{keywordtype}{int}\ baudrate,\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{KMR::dxlP1::Hal}}\ hal);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a6e237131559176b242caa699b94c5ecf}{writeData}}(std::vector<float>\ angles,\ std::vector<int>\ ids);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a4047ab0e78b0d71b7b9fe2b35c40283c}{readData}}(std::vector<int>\ ids,\ std::vector<float>\&\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\_angles}});}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a99520e9b228198aed6679136121be854}{writeLEDs}}(std::vector<int>\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff}{goal\_leds}},\ std::vector<int>\ ids);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a2a45d485ff5da398edcd26ed5224949c}{readEnabled}}(std::vector<int>\ ids,\ std::vector<float>\&\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af64c3b785285d921f7cda3fcbf5e5e01}{fbck\_enabled}});}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_ab488f6a21c89f82fe3662c48d72f36f5}{readLEDs}}(std::vector<int>\ ids,\ std::vector<float>\&\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\_leds}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a8c09a44e0b77da66eeda95cb7a5842eb}{checkMode}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

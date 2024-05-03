@@ -1,0 +1,40 @@
+# Test file for a project's motor list
+nbr_motors: 5
+motors: 
+  - ID: 112
+    model: MX_64R
+    multiturn: 1
+  - ID: 132
+    model: MX_64R
+    multiturn: 1
+  - ID: 122
+    model: MX_64R
+    multiturn: 1
+  - ID: 144
+    model: MX_64R
+    multiturn: 1
+  - ID: 121
+    model: MX_64R
+    multiturn: 1
+  # - ID: 1
+  #   model: MX_64R
+  #   multiturn: 1
+  # - ID: 2
+  #   model: MX_64R
+  #   multiturn: 1
+  # - ID: 3
+  #   model: MX_64R
+  #   multiturn: 1
+  # - ID: 4
+  #   model: MX_64R
+  #   multiturn: 1
+  # - ID: 111
+  #   model: MX_64R
+  #   multiturn: 1
+  # - ID: 131
+  #   model: MX_64R
+  #   multiturn: 1
+  # - ID: 141
+  #   model: MX_64R
+  #   multiturn: 1
+

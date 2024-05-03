@@ -1,0 +1,2 @@
+/usr/bin/ar qc libKMR_dxlP1.a CMakeFiles/KMR_dxlP1.dir/source/KMR_dxlP1_robot.cpp.o CMakeFiles/KMR_dxlP1.dir/source/KMR_dxlP1_handler.cpp.o CMakeFiles/KMR_dxlP1.dir/source/KMR_dxlP1_reader.cpp.o CMakeFiles/KMR_dxlP1.dir/source/KMR_dxlP1_writer.cpp.o CMakeFiles/KMR_dxlP1.dir/source/KMR_dxlP1_hal.cpp.o
+/usr/bin/ranlib libKMR_dxlP1.a

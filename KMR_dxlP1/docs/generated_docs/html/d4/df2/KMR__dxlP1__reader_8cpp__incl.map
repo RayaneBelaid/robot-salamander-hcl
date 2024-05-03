@@ -1,0 +1,23 @@
+<map id="/home/katarina/local/KMR&#45;libraries/Dynamixel_p1/KMR_dxlP1/source/KMR_dxlP1_reader.cpp" name="/home/katarina/local/KMR&#45;libraries/Dynamixel_p1/KMR_dxlP1/source/KMR_dxlP1_reader.cpp">
+<area shape="rect" id="Node000001" title="Defines the Reader class." alt="" coords="327,5,518,76"/>
+<area shape="rect" id="Node000002" href="$d5/d5e/KMR__dxlP1__reader_8hpp.html" title="Header for the KMR_dxlP1_reader.cpp file." alt="" coords="227,124,383,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="381,78,334,116,330,112,378,74"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="367,360,427,386"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="422,77,402,344,396,344,417,76"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="460,124,534,150"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="452,75,480,110,476,113,448,78"/>
+<area shape="rect" id="Node000003" href="$d2/d50/KMR__dxlP1__handler_8hpp.html" title="Header for the KMR_dxlP1_handler.cpp file." alt="" coords="204,198,366,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="304,151,295,183,290,182,299,149"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,271,173,312"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,226,153,268,151,263,254,221"/>
+<area shape="rect" id="Node000005" href="$dc/d12/KMR__dxlP1__hal_8hpp.html" title="Header for KMR_dxlP1_hal.cpp file." alt="" coords="196,279,334,305"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="285,224,274,265,269,263,279,223"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="302,222,325,243,348,270,372,308,389,344,384,347,367,311,344,273,321,247,298,226"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="113,360,166,386"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="247,307,173,354,170,349,245,303"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="191,360,262,386"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="262,306,241,347,237,345,257,304"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="286,303,365,349,362,354,284,307"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="286,360,343,386"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="275,304,301,345,297,348,270,306"/>
+</map>

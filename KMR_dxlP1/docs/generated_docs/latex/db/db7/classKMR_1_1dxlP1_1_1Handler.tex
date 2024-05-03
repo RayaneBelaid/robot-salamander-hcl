@@ -1,0 +1,225 @@
+\doxysection{Handler Class Reference}
+\hypertarget{classKMR_1_1dxlP1_1_1Handler}{}\label{classKMR_1_1dxlP1_1_1Handler}\index{Handler@{Handler}}
+
+
+Parent class, to be specialized as a \doxylink{classKMR_1_1dxlP1_1_1Reader}{Reader} or \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer}.  
+
+
+
+
+{\ttfamily \#include $<$KMR\+\_\+dxl\+P1\+\_\+handler.\+hpp$>$}
+
+
+
+Inheritance diagram for Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{d3/d3e/classKMR_1_1dxlP1_1_1Handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d02/classKMR_1_1dxlP1_1_1Handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a1edc77c77d08198e037a98a1f3967916}{m\+\_\+ids}}
+\item 
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\+\_\+field}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_abc45bddc1302ccd8b2c2433e07e2f5fe}{check\+Motor\+Compatibility}} (\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} field)
+\begin{DoxyCompactList}\small\item\em Check if the motors are compatible for a given field\+: same address for data storing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a8de53c414d3271698e44e73117477459}{get\+Data\+Byte\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Calculate and store the byte length of data read/written by the handler. ~\newline
+ Also check if the motors are field-\/compatible (same data lengths required for a given field) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4e8df53dbb8f7aa0e3cb173c2b3bd795}{check\+IDvalidity}} (std\+::vector$<$ int $>$ ids)
+\begin{DoxyCompactList}\small\item\em Check if query motors are handled by this specific handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a84bf1841bdb81a55f496967d00e75025}{check\+Field\+Validity}} (\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} field)
+\begin{DoxyCompactList}\small\item\em Check if query field is handled by this specific handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4f629fdf7c5f071d23458adb300f8f7c}{get\+Motor\+Index\+From\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Get the index of a motor in the list of handled motors. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ae6ed43b32d9f360ab998cf51646b7a7c}{clear\+Param}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dynamixel\+::\+Packet\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_aa72e6c819f0d93da403901c13133e613}{packet\+Handler\+\_\+}}
+\item 
+dynamixel\+::\+Port\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a93b185c722b9f661772caa4b4f4b34e1}{port\+Handler\+\_\+}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\+\_\+hal}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a806015d8cd8778f5f84c53ee8a6fb070}{m\+\_\+data\+\_\+address}} = -\/1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_afac4a02908a1202a11dc4d0acbdd4e93}{m\+\_\+data\+\_\+byte\+\_\+size}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class, to be specialized as a \doxylink{classKMR_1_1dxlP1_1_1Reader}{Reader} or \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer}. 
+
+This class is not usable by itself, it is a non-\/specialized sketelon inherited by the child classes \doxylink{classKMR_1_1dxlP1_1_1Reader}{Reader} and \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer}. ~\newline
+ It contains functionalities to check the viability of sync readers/writers that will be defined in child classes (motor compatibility). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a84bf1841bdb81a55f496967d00e75025}\label{classKMR_1_1dxlP1_1_1Handler_a84bf1841bdb81a55f496967d00e75025} 
+\index{Handler@{Handler}!checkFieldValidity@{checkFieldValidity}}
+\index{checkFieldValidity@{checkFieldValidity}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{checkFieldValidity()}{checkFieldValidity()}}
+{\footnotesize\ttfamily void check\+Field\+Validity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if query field is handled by this specific handler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em field} & Query control field \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a4e8df53dbb8f7aa0e3cb173c2b3bd795}\label{classKMR_1_1dxlP1_1_1Handler_a4e8df53dbb8f7aa0e3cb173c2b3bd795} 
+\index{Handler@{Handler}!checkIDvalidity@{checkIDvalidity}}
+\index{checkIDvalidity@{checkIDvalidity}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{checkIDvalidity()}{checkIDvalidity()}}
+{\footnotesize\ttfamily void check\+IDvalidity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if query motors are handled by this specific handler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ids} & List of query motors \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_abc45bddc1302ccd8b2c2433e07e2f5fe}\label{classKMR_1_1dxlP1_1_1Handler_abc45bddc1302ccd8b2c2433e07e2f5fe} 
+\index{Handler@{Handler}!checkMotorCompatibility@{checkMotorCompatibility}}
+\index{checkMotorCompatibility@{checkMotorCompatibility}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{checkMotorCompatibility()}{checkMotorCompatibility()}}
+{\footnotesize\ttfamily void check\+Motor\+Compatibility (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if the motors are compatible for a given field\+: same address for data storing. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em field} & Control field that the handler is taking care of \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_ae6ed43b32d9f360ab998cf51646b7a7c}\label{classKMR_1_1dxlP1_1_1Handler_ae6ed43b32d9f360ab998cf51646b7a7c} 
+\index{Handler@{Handler}!clearParam@{clearParam}}
+\index{clearParam@{clearParam}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{clearParam()}{clearParam()}}
+{\footnotesize\ttfamily virtual void clear\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a2b22d629c781c6df1333cde40d064144}{Reader}}, and \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a2b22d629c781c6df1333cde40d064144}{Writer}}.
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a8de53c414d3271698e44e73117477459}\label{classKMR_1_1dxlP1_1_1Handler_a8de53c414d3271698e44e73117477459} 
+\index{Handler@{Handler}!getDataByteSize@{getDataByteSize}}
+\index{getDataByteSize@{getDataByteSize}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{getDataByteSize()}{getDataByteSize()}}
+{\footnotesize\ttfamily void get\+Data\+Byte\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calculate and store the byte length of data read/written by the handler. ~\newline
+ Also check if the motors are field-\/compatible (same data lengths required for a given field) 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a4f629fdf7c5f071d23458adb300f8f7c}\label{classKMR_1_1dxlP1_1_1Handler_a4f629fdf7c5f071d23458adb300f8f7c} 
+\index{Handler@{Handler}!getMotorIndexFromID@{getMotorIndexFromID}}
+\index{getMotorIndexFromID@{getMotorIndexFromID}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{getMotorIndexFromID()}{getMotorIndexFromID()}}
+{\footnotesize\ttfamily int get\+Motor\+Index\+From\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the index of a motor in the list of handled motors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & Query motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Index} & of the motor in the list of handled motors \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a806015d8cd8778f5f84c53ee8a6fb070}\label{classKMR_1_1dxlP1_1_1Handler_a806015d8cd8778f5f84c53ee8a6fb070} 
+\index{Handler@{Handler}!m\_data\_address@{m\_data\_address}}
+\index{m\_data\_address@{m\_data\_address}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{m\_data\_address}{m\_data\_address}}
+{\footnotesize\ttfamily uint8\+\_\+t m\+\_\+data\+\_\+address = -\/1\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_afac4a02908a1202a11dc4d0acbdd4e93}\label{classKMR_1_1dxlP1_1_1Handler_afac4a02908a1202a11dc4d0acbdd4e93} 
+\index{Handler@{Handler}!m\_data\_byte\_size@{m\_data\_byte\_size}}
+\index{m\_data\_byte\_size@{m\_data\_byte\_size}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{m\_data\_byte\_size}{m\_data\_byte\_size}}
+{\footnotesize\ttfamily uint8\+\_\+t m\+\_\+data\+\_\+byte\+\_\+size = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}\label{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc} 
+\index{Handler@{Handler}!m\_field@{m\_field}}
+\index{m\_field@{m\_field}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{m\_field}{m\_field}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} m\+\_\+field}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a3322ee2dcd88c444e8cbc53a9d4648cf}\label{classKMR_1_1dxlP1_1_1Handler_a3322ee2dcd88c444e8cbc53a9d4648cf} 
+\index{Handler@{Handler}!m\_hal@{m\_hal}}
+\index{m\_hal@{m\_hal}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{m\_hal}{m\_hal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} m\+\_\+hal\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a1edc77c77d08198e037a98a1f3967916}\label{classKMR_1_1dxlP1_1_1Handler_a1edc77c77d08198e037a98a1f3967916} 
+\index{Handler@{Handler}!m\_ids@{m\_ids}}
+\index{m\_ids@{m\_ids}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{m\_ids}{m\_ids}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ m\+\_\+ids}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_aa72e6c819f0d93da403901c13133e613}\label{classKMR_1_1dxlP1_1_1Handler_aa72e6c819f0d93da403901c13133e613} 
+\index{Handler@{Handler}!packetHandler\_@{packetHandler\_}}
+\index{packetHandler\_@{packetHandler\_}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{packetHandler\_}{packetHandler\_}}
+{\footnotesize\ttfamily dynamixel\+::\+Packet\+Handler\texorpdfstring{$\ast$}{*} packet\+Handler\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Handler_a93b185c722b9f661772caa4b4f4b34e1}\label{classKMR_1_1dxlP1_1_1Handler_a93b185c722b9f661772caa4b4f4b34e1} 
+\index{Handler@{Handler}!portHandler\_@{portHandler\_}}
+\index{portHandler\_@{portHandler\_}!Handler@{Handler}}
+\doxysubsubsection{\texorpdfstring{portHandler\_}{portHandler\_}}
+{\footnotesize\ttfamily dynamixel\+::\+Port\+Handler\texorpdfstring{$\ast$}{*} port\+Handler\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+

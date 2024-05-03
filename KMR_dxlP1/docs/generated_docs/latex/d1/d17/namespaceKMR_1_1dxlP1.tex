@@ -1,0 +1,287 @@
+\doxysection{KMR\+::dxl\+P1 Namespace Reference}
+\hypertarget{namespaceKMR_1_1dxlP1}{}\label{namespaceKMR_1_1dxlP1}\index{KMR::dxlP1@{KMR::dxlP1}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}}
+\begin{DoxyCompactList}\small\item\em Class that defines a base robot, to be inherited by a robot class in the project. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\+\_\+modes}}
+\begin{DoxyCompactList}\small\item\em Exhaustive list of all possible control modes for Dynamixel motors. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node}{Data\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Structure used to store info from a YAML\+::\+Node during parsing the motors\textquotesingle{} control tables. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}
+\begin{DoxyCompactList}\small\item\em Hardware abstraction layer for Dynamixel motors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}
+\begin{DoxyCompactList}\small\item\em Parent class, to be specialized as a \doxylink{classKMR_1_1dxlP1_1_1Reader}{Reader} or \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}}
+\begin{DoxyCompactList}\small\item\em Structure saving the info of a single motor\+: both config-\/wise (ID, model...) and specific to the project (occupied indirect addresses, reset status...) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\+\_\+data\+\_\+field}}
+\begin{DoxyCompactList}\small\item\em Structure saving the info of a data field. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Structure used to store info from a YAML\+::\+Node during motor config parsing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{Reader}}
+\begin{DoxyCompactList}\small\item\em Custom \doxylink{classKMR_1_1dxlP1_1_1Reader}{Reader} class that contains a dynamixel\+::\+Group\+Sync\+Read object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}
+\begin{DoxyCompactList}\small\item\em Custom \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer} class that contains a dynamixel\+::\+Group\+Sync\+Write object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} \{ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a71f3c76cc61b159f90443b020ce6f538}{MX\+\_\+64R}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a05aceab806bd68d58926ac194867d147}{NBR\+\_\+\+MODELS}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a9468c5cd3ac28ff9ddab2b09cfc4c80a}{UNDEF\+\_\+M}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerate of all dynamixel motor models (not necessarily used in the project) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} \{ \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ab47ab91eb9f9648537b2b966d046afd1}{MODEL\+\_\+\+NBR}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a865a558f3ba75815d3e16750c1efc611}{FIRMWARE}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a001479a58fb44c39a29b20d565081a68}{ID}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a672286d33299eacb9b49203d71a7ff97}{BAUDRATE}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa7c5fbc22778e3526a497a2dedf7d4ff}{RETURN\+\_\+\+DELAY}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a977e7e0f97bc9bd210e2ee47330d47ee}{CW\+\_\+\+ANGLE\+\_\+\+LIMIT}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4badec749099b0e079a36fac41c2ee61}{CCW\+\_\+\+ANGLE\+\_\+\+LIMIT}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89516e9f0a6c049822f94cd68d2e1d52}{TEMP\+\_\+\+LIMIT}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a07446d7132c48f9b03aaa913bba890e3}{MIN\+\_\+\+VOLT\+\_\+\+LIMIT}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a0320f8018a7ff1d6166b6bd5998f1e6f}{MAX\+\_\+\+VOLT\+\_\+\+LIMIT}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad3add5f5967aaf6c37919ecf9fab415b}{MAX\+\_\+\+TORQUE}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a70aa9e4c76501e18f0b2861af53994be}{STATUS\+\_\+\+RETURN}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abb3bec83901c4c68db572e891d6a6d7b}{ALARM\+\_\+\+LED}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7690b021f467450541d8d89123429d40}{SHUTDOWN}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a5033ebe2d1984590c6b5355c648a769a}{MULTITURN\+\_\+\+OFFSET}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a2f1389ccd3e7a82466befd04e0e1b492}{RES\+\_\+\+DIVIDER}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ac13d9c2f71b63da4d32231d13fd95368}{TRQ\+\_\+\+ENABLE}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a21447137d62c46e603b924d455e8cd12}{LED}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4e0eeaaaab4c5b1e60dd18090617448d}{D\+\_\+\+GAIN}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62add1d0d6eef444b0f5fb36c63a76b1627}{I\+\_\+\+GAIN}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1102efcbd9e5a98cbf246ad8d1ace9b4}{P\+\_\+\+GAIN}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a378a4859a0872e2fc59fbae632f99022}{GOAL\+\_\+\+POS}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62adc54c13e333f290422cdb80404ff6ba2}{MOVING\+\_\+\+SPEED}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a6d52448c472a4078663e0714650c8d36}{TORQUE\+\_\+\+LIMIT}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abcd223fc6a6245937dda6d2f2aeae216}{PRESENT\+\_\+\+POS}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa73886b775d9d0613755864df6d6950d}{PRESENT\+\_\+\+SPEED}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a81d27954f3dae428bb4b6d28dbff10a6}{PRESENT\+\_\+\+LOAD}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad4f9c69c48b62664b0b83eb2b2bb8612}{PRESENT\+\_\+\+VOLT}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1972f56cbd55a45614ddea9d598f0bf1}{PRESENT\+\_\+\+TEMP}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89af859e5ad61a519a9e407a67b26568}{REGISTERED}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a16ebdcb23eb5337fd5bc598fa8d6035d}{MOVING}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a438b68412f24003b09e0993b62dc7b48}{LOCK}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62af3cb30feedc837a971b1907f1a96db5e}{PUNCH}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a42d526b5a1a8e2c45cd36659a3c1cd86}{REALTIME\+\_\+\+TICK}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7770173898835c0954853cb16e8d284a}{CURRENT}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a3efd6aed9ee6bf1158edcf56dec2b575}{TRQ\+\_\+\+MODE\+\_\+\+ENABLE}}
+, \newline
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a10d7494cebb7da3f72e2ee50a00935f1}{GOAL\+\_\+\+TORQUE}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abf6418a2d316f426bf5706cf0b148c11}{GOAL\+\_\+\+ACC}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abe7d343d59a155690678d610bc2bcdcf}{NBR\+\_\+\+FIELDS}}
+, \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a67662f9d7544070fd11f620b0f9fce2a}{UNDEF\+\_\+F}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerate of all data fields in a dynamixel motor (protocol 1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62} 
+\index{KMR::dxlP1@{KMR::dxlP1}!Fields@{Fields}}
+\index{Fields@{Fields}!KMR::dxlP1@{KMR::dxlP1}}
+\doxysubsubsection{\texorpdfstring{Fields}{Fields}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}}
+
+
+
+Enumerate of all data fields in a dynamixel motor (protocol 1) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODEL\_NBR@{MODEL\_NBR}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MODEL\_NBR@{MODEL\_NBR}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ab47ab91eb9f9648537b2b966d046afd1}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ab47ab91eb9f9648537b2b966d046afd1} 
+MODEL\+\_\+\+NBR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIRMWARE@{FIRMWARE}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!FIRMWARE@{FIRMWARE}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a865a558f3ba75815d3e16750c1efc611}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a865a558f3ba75815d3e16750c1efc611} 
+FIRMWARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ID@{ID}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!ID@{ID}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a001479a58fb44c39a29b20d565081a68}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a001479a58fb44c39a29b20d565081a68} 
+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAUDRATE@{BAUDRATE}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!BAUDRATE@{BAUDRATE}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a672286d33299eacb9b49203d71a7ff97}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a672286d33299eacb9b49203d71a7ff97} 
+BAUDRATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RETURN\_DELAY@{RETURN\_DELAY}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!RETURN\_DELAY@{RETURN\_DELAY}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa7c5fbc22778e3526a497a2dedf7d4ff}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa7c5fbc22778e3526a497a2dedf7d4ff} 
+RETURN\+\_\+\+DELAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CW\_ANGLE\_LIMIT@{CW\_ANGLE\_LIMIT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!CW\_ANGLE\_LIMIT@{CW\_ANGLE\_LIMIT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a977e7e0f97bc9bd210e2ee47330d47ee}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a977e7e0f97bc9bd210e2ee47330d47ee} 
+CW\+\_\+\+ANGLE\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCW\_ANGLE\_LIMIT@{CCW\_ANGLE\_LIMIT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!CCW\_ANGLE\_LIMIT@{CCW\_ANGLE\_LIMIT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4badec749099b0e079a36fac41c2ee61}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4badec749099b0e079a36fac41c2ee61} 
+CCW\+\_\+\+ANGLE\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEMP\_LIMIT@{TEMP\_LIMIT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!TEMP\_LIMIT@{TEMP\_LIMIT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89516e9f0a6c049822f94cd68d2e1d52}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89516e9f0a6c049822f94cd68d2e1d52} 
+TEMP\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIN\_VOLT\_LIMIT@{MIN\_VOLT\_LIMIT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MIN\_VOLT\_LIMIT@{MIN\_VOLT\_LIMIT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a07446d7132c48f9b03aaa913bba890e3}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a07446d7132c48f9b03aaa913bba890e3} 
+MIN\+\_\+\+VOLT\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_VOLT\_LIMIT@{MAX\_VOLT\_LIMIT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MAX\_VOLT\_LIMIT@{MAX\_VOLT\_LIMIT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a0320f8018a7ff1d6166b6bd5998f1e6f}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a0320f8018a7ff1d6166b6bd5998f1e6f} 
+MAX\+\_\+\+VOLT\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_TORQUE@{MAX\_TORQUE}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MAX\_TORQUE@{MAX\_TORQUE}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad3add5f5967aaf6c37919ecf9fab415b}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad3add5f5967aaf6c37919ecf9fab415b} 
+MAX\+\_\+\+TORQUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATUS\_RETURN@{STATUS\_RETURN}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!STATUS\_RETURN@{STATUS\_RETURN}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a70aa9e4c76501e18f0b2861af53994be}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a70aa9e4c76501e18f0b2861af53994be} 
+STATUS\+\_\+\+RETURN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALARM\_LED@{ALARM\_LED}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!ALARM\_LED@{ALARM\_LED}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abb3bec83901c4c68db572e891d6a6d7b}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abb3bec83901c4c68db572e891d6a6d7b} 
+ALARM\+\_\+\+LED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHUTDOWN@{SHUTDOWN}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!SHUTDOWN@{SHUTDOWN}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7690b021f467450541d8d89123429d40}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7690b021f467450541d8d89123429d40} 
+SHUTDOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTITURN\_OFFSET@{MULTITURN\_OFFSET}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MULTITURN\_OFFSET@{MULTITURN\_OFFSET}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a5033ebe2d1984590c6b5355c648a769a}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a5033ebe2d1984590c6b5355c648a769a} 
+MULTITURN\+\_\+\+OFFSET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RES\_DIVIDER@{RES\_DIVIDER}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!RES\_DIVIDER@{RES\_DIVIDER}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a2f1389ccd3e7a82466befd04e0e1b492}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a2f1389ccd3e7a82466befd04e0e1b492} 
+RES\+\_\+\+DIVIDER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRQ\_ENABLE@{TRQ\_ENABLE}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!TRQ\_ENABLE@{TRQ\_ENABLE}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ac13d9c2f71b63da4d32231d13fd95368}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ac13d9c2f71b63da4d32231d13fd95368} 
+TRQ\+\_\+\+ENABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED@{LED}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!LED@{LED}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a21447137d62c46e603b924d455e8cd12}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a21447137d62c46e603b924d455e8cd12} 
+LED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\_GAIN@{D\_GAIN}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!D\_GAIN@{D\_GAIN}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4e0eeaaaab4c5b1e60dd18090617448d}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4e0eeaaaab4c5b1e60dd18090617448d} 
+D\+\_\+\+GAIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\_GAIN@{I\_GAIN}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!I\_GAIN@{I\_GAIN}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62add1d0d6eef444b0f5fb36c63a76b1627}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62add1d0d6eef444b0f5fb36c63a76b1627} 
+I\+\_\+\+GAIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_GAIN@{P\_GAIN}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!P\_GAIN@{P\_GAIN}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1102efcbd9e5a98cbf246ad8d1ace9b4}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1102efcbd9e5a98cbf246ad8d1ace9b4} 
+P\+\_\+\+GAIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GOAL\_POS@{GOAL\_POS}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!GOAL\_POS@{GOAL\_POS}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a378a4859a0872e2fc59fbae632f99022}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a378a4859a0872e2fc59fbae632f99022} 
+GOAL\+\_\+\+POS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING\_SPEED@{MOVING\_SPEED}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MOVING\_SPEED@{MOVING\_SPEED}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62adc54c13e333f290422cdb80404ff6ba2}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62adc54c13e333f290422cdb80404ff6ba2} 
+MOVING\+\_\+\+SPEED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TORQUE\_LIMIT@{TORQUE\_LIMIT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!TORQUE\_LIMIT@{TORQUE\_LIMIT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a6d52448c472a4078663e0714650c8d36}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a6d52448c472a4078663e0714650c8d36} 
+TORQUE\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESENT\_POS@{PRESENT\_POS}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!PRESENT\_POS@{PRESENT\_POS}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abcd223fc6a6245937dda6d2f2aeae216}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abcd223fc6a6245937dda6d2f2aeae216} 
+PRESENT\+\_\+\+POS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESENT\_SPEED@{PRESENT\_SPEED}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!PRESENT\_SPEED@{PRESENT\_SPEED}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa73886b775d9d0613755864df6d6950d}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa73886b775d9d0613755864df6d6950d} 
+PRESENT\+\_\+\+SPEED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESENT\_LOAD@{PRESENT\_LOAD}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!PRESENT\_LOAD@{PRESENT\_LOAD}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a81d27954f3dae428bb4b6d28dbff10a6}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a81d27954f3dae428bb4b6d28dbff10a6} 
+PRESENT\+\_\+\+LOAD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESENT\_VOLT@{PRESENT\_VOLT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!PRESENT\_VOLT@{PRESENT\_VOLT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad4f9c69c48b62664b0b83eb2b2bb8612}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad4f9c69c48b62664b0b83eb2b2bb8612} 
+PRESENT\+\_\+\+VOLT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESENT\_TEMP@{PRESENT\_TEMP}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!PRESENT\_TEMP@{PRESENT\_TEMP}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1972f56cbd55a45614ddea9d598f0bf1}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1972f56cbd55a45614ddea9d598f0bf1} 
+PRESENT\+\_\+\+TEMP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REGISTERED@{REGISTERED}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!REGISTERED@{REGISTERED}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89af859e5ad61a519a9e407a67b26568}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89af859e5ad61a519a9e407a67b26568} 
+REGISTERED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING@{MOVING}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MOVING@{MOVING}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a16ebdcb23eb5337fd5bc598fa8d6035d}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a16ebdcb23eb5337fd5bc598fa8d6035d} 
+MOVING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOCK@{LOCK}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!LOCK@{LOCK}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a438b68412f24003b09e0993b62dc7b48}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a438b68412f24003b09e0993b62dc7b48} 
+LOCK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PUNCH@{PUNCH}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!PUNCH@{PUNCH}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62af3cb30feedc837a971b1907f1a96db5e}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62af3cb30feedc837a971b1907f1a96db5e} 
+PUNCH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REALTIME\_TICK@{REALTIME\_TICK}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!REALTIME\_TICK@{REALTIME\_TICK}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a42d526b5a1a8e2c45cd36659a3c1cd86}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a42d526b5a1a8e2c45cd36659a3c1cd86} 
+REALTIME\+\_\+\+TICK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURRENT@{CURRENT}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!CURRENT@{CURRENT}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7770173898835c0954853cb16e8d284a}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7770173898835c0954853cb16e8d284a} 
+CURRENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRQ\_MODE\_ENABLE@{TRQ\_MODE\_ENABLE}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!TRQ\_MODE\_ENABLE@{TRQ\_MODE\_ENABLE}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a3efd6aed9ee6bf1158edcf56dec2b575}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a3efd6aed9ee6bf1158edcf56dec2b575} 
+TRQ\+\_\+\+MODE\+\_\+\+ENABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GOAL\_TORQUE@{GOAL\_TORQUE}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!GOAL\_TORQUE@{GOAL\_TORQUE}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a10d7494cebb7da3f72e2ee50a00935f1}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a10d7494cebb7da3f72e2ee50a00935f1} 
+GOAL\+\_\+\+TORQUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GOAL\_ACC@{GOAL\_ACC}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!GOAL\_ACC@{GOAL\_ACC}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abf6418a2d316f426bf5706cf0b148c11}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abf6418a2d316f426bf5706cf0b148c11} 
+GOAL\+\_\+\+ACC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NBR\_FIELDS@{NBR\_FIELDS}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!NBR\_FIELDS@{NBR\_FIELDS}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abe7d343d59a155690678d610bc2bcdcf}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abe7d343d59a155690678d610bc2bcdcf} 
+NBR\+\_\+\+FIELDS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEF\_F@{UNDEF\_F}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!UNDEF\_F@{UNDEF\_F}}}\Hypertarget{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a67662f9d7544070fd11f620b0f9fce2a}\label{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a67662f9d7544070fd11f620b0f9fce2a} 
+UNDEF\+\_\+F&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}\label{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6} 
+\index{KMR::dxlP1@{KMR::dxlP1}!Motor\_models@{Motor\_models}}
+\index{Motor\_models@{Motor\_models}!KMR::dxlP1@{KMR::dxlP1}}
+\doxysubsubsection{\texorpdfstring{Motor\_models}{Motor\_models}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}}}
+
+
+
+Enumerate of all dynamixel motor models (not necessarily used in the project) 
+
+\begin{DoxyAttention}{Attention}
+If a new model is added, this enum needs to be updated, as well as the function "{}string2\+Motors\+\_\+models"{} in the .cpp 
+\end{DoxyAttention}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MX\_64R@{MX\_64R}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!MX\_64R@{MX\_64R}}}\Hypertarget{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a71f3c76cc61b159f90443b020ce6f538}\label{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a71f3c76cc61b159f90443b020ce6f538} 
+MX\+\_\+64R&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NBR\_MODELS@{NBR\_MODELS}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!NBR\_MODELS@{NBR\_MODELS}}}\Hypertarget{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a05aceab806bd68d58926ac194867d147}\label{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a05aceab806bd68d58926ac194867d147} 
+NBR\+\_\+\+MODELS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEF\_M@{UNDEF\_M}!KMR::dxlP1@{KMR::dxlP1}}\index{KMR::dxlP1@{KMR::dxlP1}!UNDEF\_M@{UNDEF\_M}}}\Hypertarget{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a9468c5cd3ac28ff9ddab2b09cfc4c80a}\label{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a9468c5cd3ac28ff9ddab2b09cfc4c80a} 
+UNDEF\+\_\+M&\\
+\hline
+
+\end{DoxyEnumFields}

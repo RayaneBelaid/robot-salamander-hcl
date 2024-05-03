@@ -1,0 +1,222 @@
+\chapter{How to use}
+\hypertarget{how-to-use}{}\label{how-to-use}\index{How to use@{How to use}}
+The library lives in the KMR\+::dxl namespace.\hypertarget{how-to-use_autotoc_md9}{}\doxysection{\texorpdfstring{I. Initializations}{I. Initializations}}\label{how-to-use_autotoc_md9}
+\hypertarget{how-to-use_autotoc_md10}{}\doxysubsection{\texorpdfstring{Step 1\+: Write a motor configuration file}{Step 1: Write a motor configuration file}}\label{how-to-use_autotoc_md10}
+The first thing that needs to be done is to create a yaml configuration file of the motors used in the projet. ~\newline
+Let\textquotesingle{}s assume the robot has 4 motors with IDs \{1, 2, 3, 4\}, all of model MX\+\_\+64R. Motors 1 and 3 are in multiturn mode, while the 2 others are not. ~\newline
+The motor configuration file will look as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ motors\_config.yaml}
+\DoxyCodeLine{nbr\_motors:\ 4\ \ \ \ }
+\DoxyCodeLine{motors:\ }
+\DoxyCodeLine{\ \ -\/\ ID:\ 1}
+\DoxyCodeLine{\ \ \ \ model:\ MX\_64R}
+\DoxyCodeLine{\ \ \ \ multiturn:\ 1}
+\DoxyCodeLine{\ \ -\/\ ID:\ 2}
+\DoxyCodeLine{\ \ \ \ model:\ MX\_64R}
+\DoxyCodeLine{\ \ \ \ multiturn:\ 0}
+\DoxyCodeLine{\ \ -\/\ ID:\ 3}
+\DoxyCodeLine{\ \ \ \ model:\ MX\_64R}
+\DoxyCodeLine{\ \ \ \ multiturn:\ 1}
+\DoxyCodeLine{\ \ -\/\ ID:\ 4}
+\DoxyCodeLine{\ \ \ \ model:\ MX\_64R}
+\DoxyCodeLine{\ \ \ \ multiturn:\ 0}
+
+\end{DoxyCode}
+
+
+The multiturn mode corresponds to the "{}extended position control"{} in dynamixel\textquotesingle{}s SDK. It\textquotesingle{}s a position control allowing 255 turns in each direction before the input value saturates. In order to avoid saturation and thus, to allow motors turning indefinitely, this library resets a motor after it does more than a full turn relative to its starting 0 position. ~\newline
+After the reset, the motor thus detects its position as being between -\/180° and +180° again. ~\newline
+
+
+In addition to setting the "{}multiturn"{} configuration in the yaml file correctly, the motors themselves must of course be configured for the correct operation mode.
+
+{\itshape Note}\+: the "{}multiturn"{} configuration must always be present in the yaml file, even if it\textquotesingle{}s not used in any motor. Just set it to 0 for each motor.\hypertarget{how-to-use_autotoc_md11}{}\doxysubsection{\texorpdfstring{Step 2\+: Initialize hal}{Step 2: Initialize hal}}\label{how-to-use_autotoc_md11}
+The second step is to initialize a KMR\+::dxl\+::\+Hal object in the project\textquotesingle{}s main file. ~\newline
+This allows to make sure the motors configuration files are correct, as well as to create the hidden control tables used to abstract the hardware layer\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ In\ main.cpp}}
+\DoxyCodeLine{KMR::dxl::Hal\ hal;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{char}\ path\_to\_motor\_config[]\ =\ \textcolor{stringliteral}{"{}../config/motors\_config.yaml"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char}\ path\_to\_KMR\_dxl[]\ =\ \textcolor{stringliteral}{"{}../KMR\_dxl"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::vector<int>\ all\_ids\ =\ hal.init(path\_to\_motor\_config,\ path\_to\_KMR\_dxl);}
+
+\end{DoxyCode}
+\hypertarget{how-to-use_autotoc_md12}{}\doxysection{\texorpdfstring{II. Create your Robot class}{II. Create your Robot class}}\label{how-to-use_autotoc_md12}
+\hypertarget{how-to-use_autotoc_md13}{}\doxysubsection{\texorpdfstring{Step 3\+: Declare Robot}{Step 3: Declare Robot}}\label{how-to-use_autotoc_md13}
+The project\textquotesingle{}s \doxylink{classRobot}{Robot} class needs to inherit KMR\+::dxl\+::\+Base\+Robot, which results in this class declaration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ robot.hpp}}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classRobot}{Robot}}\ :\ \textcolor{keyword}{public}\ KMR::dxl::BaseRobot\ \{}
+\DoxyCodeLine{\ \ \ \ ....}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ and this constructor\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ robot.cpp}}
+\DoxyCodeLine{\mbox{\hyperlink{classRobot_ae4fc25df0af461357d3ba1020cfca9ff}{Robot::Robot}}(vector<int>\ all\_ids,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *port\_name,\ \textcolor{keywordtype}{int}\ baudrate,\ KMR::dxl::Hal\ hal)}
+\DoxyCodeLine{:\ \mbox{\hyperlink{namespaceKMR}{KMR}}::dxl::BaseRobot(all\_ids,\ port\_name,\ baudrate,\ hal)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \hypertarget{how-to-use_autotoc_md14}{}\doxysubsection{\texorpdfstring{Step 4\+: Writer handlers}{Step 4: Writer handlers}}\label{how-to-use_autotoc_md14}
+To create a handler that sends data to the motors (example\+: goal positions, LED control), a KMR\+::dxl\+::\+Writer object is used. ~\newline
+It can be declared as a private member of \doxylink{classRobot}{Robot}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ robot.hpp}}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classRobot}{Robot}}\ :\ \textcolor{keyword}{public}\ KMR::dxl::BaseRobot\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ KMR::dxl::Writer\ *\mbox{\hyperlink{classRobot_a2d028e36d975089678117edb1dd550d2}{m\_writer}};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+and initialized in \doxylink{classRobot}{Robot}\textquotesingle{}s constructor\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m\_writer\ =\ \textcolor{keyword}{new}\ KMR::dxl::Writer(writer\_fields,\ ids,\ portHandler\_,\ packetHandler\_,\ m\_hal,\ 0);}
+
+\end{DoxyCode}
+ The "{}writer\+\_\+fields"{} is the list of field(s) that will be handled by this specific Writer object. Since this library uses the protocol 2 of dynamixel\textquotesingle{}s SDK, a single Writer can handle several control fields, resulting in an indirect address writing -\/ but this is handled by the library automatically.
+
+The fields themselves are enumerated in KMR\+::dxl\+::\+Fields and correspond to control fields found in Dynamixels\textquotesingle{} control tables, as in \href{https://emanual.robotis.com/docs/en/dxl/mx/mx-64-2/\#control-table}{\texttt{ https\+://emanual.\+robotis.\+com/docs/en/dxl/mx/mx-\/64-\/2/\#control-\/table}} ~\newline
+ For example, if we wish to have a Writer handler that sends goal positions and LED status commands to motors, the Writer definition becomes\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{vector<KMR::dxl::Fields>\ writer\_fields\ =\ \{KMR::dxl::GOAL\_POS,\ KMR::dxl::LED\};}
+\DoxyCodeLine{m\_writer\ =\ \textcolor{keyword}{new}\ KMR::dxl::Writer(writer\_fields,\ ids,\ portHandler\_,\ packetHandler\_,\ m\_hal,\ 0);}
+
+\end{DoxyCode}
+
+
+Finally, the last element we need to use the Writer is the function that actually sends the data to motors. The creation of this function is very straightforward.
+
+The method KMR\+::dxl\+::\+Writer\+::add\+Data\+To\+Write allows to save data that need to be sent to motors into the Writer\textquotesingle{}s private attribute table. Then, once all the data is updated, it is sent with the method KMR\+::dxl\+::\+Writer\+::sync\+Write. ~\newline
+ Keeping the same Writer example, a public method can be defined inside \doxylink{classRobot}{Robot}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ robot.cpp}}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a6e237131559176b242caa699b94c5ecf}{Robot::writeData}}(vector<float>\ angles,\ vector<int>\ LED\_vals,\ vector<int>\ ids)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classRobot_a2d028e36d975089678117edb1dd550d2}{m\_writer}}-\/>\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c}{addDataToWrite}}(angles,\ KMR::dxl::GOAL\_POS,\ ids);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classRobot_a2d028e36d975089678117edb1dd550d2}{m\_writer}}-\/>\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c}{addDataToWrite}}(LED\_vals,\ KMR::dxl::LED,\ ids);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classRobot_a2d028e36d975089678117edb1dd550d2}{m\_writer}}-\/>\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_abb7dfb8e49cb7ca54b8d007b1f947730}{syncWrite}}(ids);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+This public method \doxylink{classRobot_a6e237131559176b242caa699b94c5ecf}{Robot\+::write\+Data} can be for example called from the main when new control values are received from the controller.\hypertarget{how-to-use_autotoc_md15}{}\doxysubsection{\texorpdfstring{Step 5\+: Reader handlers}{Step 5: Reader handlers}}\label{how-to-use_autotoc_md15}
+In order to fetch data from the motors\textquotesingle{} sensors (for example current position and temperature), a KMR\+::dxl\+::\+Reader object is required. It works extremely similarly to its Writer counterpart.
+
+When writing the read function, one needs to be careful about the order in which the control fields were written when declaring the Reader. ~\newline
+The method KMR\+::dxl\+::\+Reader\+::sync\+Read stores the data received from motors into the Reader\textquotesingle{}s attribute table "{}m\+\_\+data\+From\+Motor"{}, organized like this\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ....   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field\+\_\+n    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ....   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field\+\_\+n    }\\\cline{1-5}
+\endhead
+id\mbox{[}0\mbox{]}   &&&&\\\cline{1-5}
+...   &&&&\\\cline{1-5}
+id\mbox{[}last\mbox{]}   &&&&\\\cline{1-5}
+\end{longtabu}
+
+
+As such, if for example we wanted a Reader that reads present position and LED status, the declaration would be\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{vector<KMR::dxl::Fields>\ reader\_fields\ =\ \{KMR::dxl::PRESENT\_POS,\ KMR::dxl::LED\};}
+\DoxyCodeLine{m\_reader\ =\ \textcolor{keyword}{new}\ KMR::dxl::Reader(reader\_fields,\ \mbox{\hyperlink{test__dxlP1_8cpp_adaa9a0d2fadfd52f45de06467a454543}{handlers\_ids}},\ portHandler\_,\ packetHandler\_,\ m\_hal,\ 0);}
+
+\end{DoxyCode}
+
+
+which means the present position data will be saved in the first column of "{}m\+\_\+data\+From\+Motor"{} and the LED status in the second. ~\newline
+As such, the reading function is\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ robot.cpp}}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a4047ab0e78b0d71b7b9fe2b35c40283c}{Robot::readData}}(vector<int>\ ids,\ vector<float>\&\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\_angles}},\ vector<float>\&\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\_leds}})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classRobot_a2839307214a5e0165201451a78ba3e0f}{m\_reader}}-\/>\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_acf41df1f0a00bb3c6b0ada2792dab5b7}{syncRead}}(ids);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<ids.size();\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\_angles}}[i]\ =\ \mbox{\hyperlink{classRobot_a2839307214a5e0165201451a78ba3e0f}{m\_reader}}-\/>\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a2409ee0a42d14b9152108469e7708850}{m\_dataFromMotor}}[i][0];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\_leds}}[i]\ =\ \mbox{\hyperlink{classRobot_a2839307214a5e0165201451a78ba3e0f}{m\_reader}}-\/>\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a2409ee0a42d14b9152108469e7708850}{m\_dataFromMotor}}[i][1];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{how-to-use_autotoc_md16}{}\doxysubsection{\texorpdfstring{Note\+: multiturn reset}{Note: multiturn reset}}\label{how-to-use_autotoc_md16}
+The public method KMR\+::dxl\+::\+Base\+Robot\+::reset\+Multiturn\+Motors resets the motors flagged as in need of a reset. It is inherited by the \doxylink{classRobot}{Robot} class, and needs to be called only if the project contains multiturn motors.
+
+It is up to the user where they want to call it. A good idea is to call it at the start of each control loop, before reading the sensor values. ~\newline
+If wished, one can also add it for example at the end of the writing functions.
+
+\begin{quote}
+{\bfseries{Warning}} ~\newline
+ If the reset\+Multiturn\+Motors method is called at the end of the writing method, make sure the motors had enough time to execute the movement before calling the reset, such as by adding a short sleep time. If they are reset before they could execute the whole movement, it results in undefined behavior. \end{quote}
+\hypertarget{how-to-use_autotoc_md17}{}\doxysection{\texorpdfstring{III. Create a Robot object}{III. Create a Robot object}}\label{how-to-use_autotoc_md17}
+Keeping the previous examples, a very basic project could look like this\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ main.cpp}}
+\DoxyCodeLine{}
+\DoxyCodeLine{KMR::dxl::Hal\ hal;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{char}\ path\_to\_motor\_config[]\ =\ \textcolor{stringliteral}{"{}../config/motors\_config.yaml"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char}\ path\_to\_KMR\_dxl[]\ =\ \textcolor{stringliteral}{"{}../KMR\_dxl"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::vector<int>\ all\_ids\ =\ hal.init(path\_to\_motor\_config,\ path\_to\_KMR\_dxl);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ robot\ instance}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ baudrate\ =\ 1000000;}
+\DoxyCodeLine{\mbox{\hyperlink{classRobot}{Robot}}\ robot(all\_ids,\ \textcolor{stringliteral}{"{}/dev/ttyUSB0"{}},\ baudrate,\ hal);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Feedback\ tables}}
+\DoxyCodeLine{vector<float>\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\_angles}}(4);}
+\DoxyCodeLine{vector<float>\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\_leds}}(4);}
+\DoxyCodeLine{vector<float>\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a2ba8fedc8f987dfe2e5db2e3632d3edb}{goal\_angles}}(4);}
+\DoxyCodeLine{vector<float>\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff}{goal\_leds}}(4);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Start\ the\ loop}}
+\DoxyCodeLine{robot.enableMotors();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}(1)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Only\ needed\ if\ there\ are\ multiturn\ motors}}
+\DoxyCodeLine{\ \ \ \ robot.resetMultiturnMotors();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ robot.readData(all\_ids,\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\_angles}},\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\_leds}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Send\ the\ feedback\ values\ to\ the\ controller\ and\ get\ the\ new}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ goal\ values\ into\ goal\_angles\ and\ goal\_leds}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ robot.writeData(\mbox{\hyperlink{speedTest__dxlP1_8cpp_a2ba8fedc8f987dfe2e5db2e3632d3edb}{goal\_angles}},\ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff}{goal\_leds}},\ all\_ids);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ sleep(1);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

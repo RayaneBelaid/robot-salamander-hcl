@@ -1,0 +1,41 @@
+\doxysection{KMR\+\_\+dxl\+P1\+\_\+reader.\+hpp}
+\hypertarget{KMR__dxlP1__reader_8hpp_source}{}\label{KMR__dxlP1__reader_8hpp_source}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_reader.hpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_reader.hpp}}
+\mbox{\hyperlink{KMR__dxlP1__reader_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ KMR\_DXLP1\_READER\_HPP}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ KMR\_DXLP1\_READER\_HPP}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KMR__dxlP1__handler_8hpp}{KMR\_dxlP1\_handler.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceKMR_1_1dxlP1}{KMR::dxlP1}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{Reader}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00031\ \ \ \ \ dynamixel::GroupBulkRead\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a3fe373c3e1b8ecf4fd11a219bc01af2d}{m\_groupBulkReader}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a2b22d629c781c6df1333cde40d064144}{clearParam}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a16d14b3e3bc6d4097adca6d70929e5b0}{addParam}}(uint8\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a31595f077cd94de8049b58a376c84be4}{checkReadSuccessful}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a55ce69b403a1961ef0e79738435b6c6b}{populateOutputMatrix}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_abe8414dbcee6fd1bc721219cbca7bd83}{position2Angle}}(int32\_t\ position,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{float}\ units);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a2409ee0a42d14b9152108469e7708850}{m\_dataFromMotor}};\ \ \textcolor{comment}{//\ Table\ holding\ the\ read\ values\ from\ motors}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_ab9aaa945306651f8ac05d4843a0d943d}{motorIndices\_dataFromMotor}};\ \textcolor{comment}{//\ used?\ @todo}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a1e7570bbc90913f4bf9b2c5bf4de937b}{fieldIndices\_dataFromMotor}};\ \textcolor{comment}{//\ used?\ @todo}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{Reader}}(\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ field,\ std::vector<int>\ ids,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ dynamixel::PortHandler\ *portHandler,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ dynamixel::PacketHandler\ *packetHandler,\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}\ hal);}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_a504a9695aa4e21c0abb7415e4199fac9}{\string~Reader}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader_acf41df1f0a00bb3c6b0ada2792dab5b7}{syncRead}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \}\ \textcolor{comment}{//\ namespace\ KMR::dxl}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

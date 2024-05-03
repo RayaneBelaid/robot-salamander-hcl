@@ -1,0 +1,93 @@
+\doxysection{Motor Struct Reference}
+\hypertarget{structKMR_1_1dxlP1_1_1Motor}{}\label{structKMR_1_1dxlP1_1_1Motor}\index{Motor@{Motor}}
+
+
+Structure saving the info of a single motor\+: both config-\/wise (ID, model...) and specific to the project (occupied indirect addresses, reset status...)  
+
+
+
+
+{\ttfamily \#include $<$KMR\+\_\+dxl\+P1\+\_\+hal.\+hpp$>$}
+
+
+
+Collaboration diagram for Motor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{da/d1f/structKMR_1_1dxlP1_1_1Motor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a7441ef0865bcb3db9b8064dd7375c1ea}{id}}
+\item 
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_ac231b56877d24f61cef2a52cf0cfed6f}{model}}
+\item 
+int \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a74024eebe74c6d54473f8d02683b4a33}{multiturn}}
+\item 
+\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\+\_\+modes}} \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a048f8e6d600c63605637e067f1c5afd7}{control\+\_\+modes}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_aa0238fa9390d91a3124d19b495e4fcca}{indir\+\_\+address\+\_\+offset}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a3c6affa4dd2d292e3d69a2d69f80790a}{indir\+\_\+data\+\_\+offset}} = 0
+\item 
+int \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_ab42d141dc267dd7892ddf55d30937e1d}{scanned\+\_\+model}} = 0
+\item 
+int \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a23929220bbe7b7a17ef876cda1e5d536}{to\+Reset}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure saving the info of a single motor\+: both config-\/wise (ID, model...) and specific to the project (occupied indirect addresses, reset status...) 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_a048f8e6d600c63605637e067f1c5afd7}\label{structKMR_1_1dxlP1_1_1Motor_a048f8e6d600c63605637e067f1c5afd7} 
+\index{Motor@{Motor}!control\_modes@{control\_modes}}
+\index{control\_modes@{control\_modes}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{control\_modes}{control\_modes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\+\_\+modes}} control\+\_\+modes}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_a7441ef0865bcb3db9b8064dd7375c1ea}\label{structKMR_1_1dxlP1_1_1Motor_a7441ef0865bcb3db9b8064dd7375c1ea} 
+\index{Motor@{Motor}!id@{id}}
+\index{id@{id}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int id}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_aa0238fa9390d91a3124d19b495e4fcca}\label{structKMR_1_1dxlP1_1_1Motor_aa0238fa9390d91a3124d19b495e4fcca} 
+\index{Motor@{Motor}!indir\_address\_offset@{indir\_address\_offset}}
+\index{indir\_address\_offset@{indir\_address\_offset}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{indir\_address\_offset}{indir\_address\_offset}}
+{\footnotesize\ttfamily uint8\+\_\+t indir\+\_\+address\+\_\+offset = 0}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_a3c6affa4dd2d292e3d69a2d69f80790a}\label{structKMR_1_1dxlP1_1_1Motor_a3c6affa4dd2d292e3d69a2d69f80790a} 
+\index{Motor@{Motor}!indir\_data\_offset@{indir\_data\_offset}}
+\index{indir\_data\_offset@{indir\_data\_offset}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{indir\_data\_offset}{indir\_data\_offset}}
+{\footnotesize\ttfamily uint8\+\_\+t indir\+\_\+data\+\_\+offset = 0}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_ac231b56877d24f61cef2a52cf0cfed6f}\label{structKMR_1_1dxlP1_1_1Motor_ac231b56877d24f61cef2a52cf0cfed6f} 
+\index{Motor@{Motor}!model@{model}}
+\index{model@{model}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\+\_\+models}} model}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_a74024eebe74c6d54473f8d02683b4a33}\label{structKMR_1_1dxlP1_1_1Motor_a74024eebe74c6d54473f8d02683b4a33} 
+\index{Motor@{Motor}!multiturn@{multiturn}}
+\index{multiturn@{multiturn}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{multiturn}{multiturn}}
+{\footnotesize\ttfamily int multiturn}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_ab42d141dc267dd7892ddf55d30937e1d}\label{structKMR_1_1dxlP1_1_1Motor_ab42d141dc267dd7892ddf55d30937e1d} 
+\index{Motor@{Motor}!scanned\_model@{scanned\_model}}
+\index{scanned\_model@{scanned\_model}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{scanned\_model}{scanned\_model}}
+{\footnotesize\ttfamily int scanned\+\_\+model = 0}
+
+\Hypertarget{structKMR_1_1dxlP1_1_1Motor_a23929220bbe7b7a17ef876cda1e5d536}\label{structKMR_1_1dxlP1_1_1Motor_a23929220bbe7b7a17ef876cda1e5d536} 
+\index{Motor@{Motor}!toReset@{toReset}}
+\index{toReset@{toReset}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{toReset}{toReset}}
+{\footnotesize\ttfamily int to\+Reset = 0}
+

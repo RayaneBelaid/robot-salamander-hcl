@@ -1,0 +1,7 @@
+<map id="Handler" name="Handler">
+<area shape="rect" id="Node000001" title="Parent class, to be specialized as a Reader or Writer." alt="" coords="45,5,111,31"/>
+<area shape="rect" id="Node000002" href="$d3/d54/classKMR_1_1dxlP1_1_1Reader.html" title="Custom Reader class that contains a dynamixel::GroupSyncRead object." alt="" coords="5,79,68,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,46,46,80,41,77,61,43"/>
+<area shape="rect" id="Node000003" href="$d9/d9d/classKMR_1_1dxlP1_1_1Writer.html" title="Custom Writer class that contains a dynamixel::GroupSyncWrite object." alt="" coords="92,79,147,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,43,114,77,110,80,90,46"/>
+</map>

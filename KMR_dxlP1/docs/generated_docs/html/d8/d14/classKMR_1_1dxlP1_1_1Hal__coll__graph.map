@@ -1,0 +1,10 @@
+<map id="Hal" name="Hal">
+<area shape="rect" id="Node000001" title="Hardware abstraction layer for Dynamixel motors." alt="" coords="219,183,260,208"/>
+<area shape="rect" id="Node000002" href="$d4/de0/structKMR_1_1dxlP1_1_1Motor.html" title="Structure saving the info of a single motor: both config&#45;wise (ID, model...) and specific to the proj..." alt="" coords="216,94,271,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,135,244,144,242,182,237,182,239,144,239,135"/>
+<area shape="rect" id="Node000003" href="$d5/dde/structKMR_1_1dxlP1_1_1Control__modes.html" title="Exhaustive list of all possible control modes for Dynamixel motors." alt="" coords="5,5,114,31"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="51,46,44,82,46,101,53,118,69,137,89,152,135,174,181,186,219,190,218,196,180,191,133,179,86,157,66,141,49,121,41,103,39,82,46,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,36,219,91,217,96,98,41"/>
+<area shape="rect" id="Node000004" href="$d3/d80/structKMR_1_1dxlP1_1_1Motor__data__field.html" title="Structure saving the info of a data field." alt="" coords="297,94,414,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="347,135,328,161,295,181,262,192,260,187,292,176,324,157,343,132"/>
+</map>

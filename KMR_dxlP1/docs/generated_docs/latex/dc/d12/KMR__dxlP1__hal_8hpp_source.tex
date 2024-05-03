@@ -1,0 +1,114 @@
+\doxysection{KMR\+\_\+dxl\+P1\+\_\+hal.\+hpp}
+\hypertarget{KMR__dxlP1__hal_8hpp_source}{}\label{KMR__dxlP1__hal_8hpp_source}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_hal.hpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_hal.hpp}}
+\mbox{\hyperlink{KMR__dxlP1__hal_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ KMR\_DXLP1\_HAL\_HPP}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ KMR\_DXLP1\_HAL\_HPP}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceKMR_1_1dxlP1}{KMR::dxlP1}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\_data\_field}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ std::uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field_ab61436af4408866720e3d02f80fce841}{address}};}
+\DoxyCodeLine{00031\ \ \ \ \ std::uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field_aa9727d65532357fd54f8c6aceeaf59be}{length}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field_abd63c1b0b945732cc551229ae353bfc9}{unit}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node}{Data\_node}}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node_aa1969ee9e6c3d3f8a893724deff6ad09}{field\_name}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node_a45c6bc6d1135dc398bf8deae861a2ebc}{address}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node_a9f59b34b1f25fe00023291b678246bcc}{length}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node_abd63c1b0b945732cc551229ae353bfc9}{unit}};}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\_node}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ std::string\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node_a8f5117f344d6eab6eb9a789f5ef03622}{model\_name}};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node_a74024eebe74c6d54473f8d02683b4a33}{multiturn}};}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\_models}}}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a71f3c76cc61b159f90443b020ce6f538}{MX\_64R}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a05aceab806bd68d58926ac194867d147}{NBR\_MODELS}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6a9468c5cd3ac28ff9ddab2b09cfc4c80a}{UNDEF\_M}}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\_modes}}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes_ac093bb0f60ca9d76f86965bce38986af}{current\_control}};}
+\DoxyCodeLine{00070\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes_a089a2e9cc2b58e94b0a152310368fc8c}{velocity\_control}};}
+\DoxyCodeLine{00071\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes_a4f8263362f9a048aa39ea5ff1a74c554}{position\_control}};}
+\DoxyCodeLine{00072\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes_a0cd571085eb55a8abd510784b8065a00}{multiturn\_control}};\ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes_af9997d07a081c87d5b10faa26d649f82}{current\_based\_position\_control}};}
+\DoxyCodeLine{00074\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes_a78b535a834d614618c0df82fee543538}{PWM\_control}};}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}}\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\_models}}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_ac231b56877d24f61cef2a52cf0cfed6f}{model}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a74024eebe74c6d54473f8d02683b4a33}{multiturn}};}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\_modes}}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a048f8e6d600c63605637e067f1c5afd7}{control\_modes}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_aa0238fa9390d91a3124d19b495e4fcca}{indir\_address\_offset}}\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a3c6affa4dd2d292e3d69a2d69f80790a}{indir\_data\_offset}}\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_ab42d141dc267dd7892ddf55d30937e1d}{scanned\_model}}\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor_a23929220bbe7b7a17ef876cda1e5d536}{toReset}}\ =\ 0;}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ab47ab91eb9f9648537b2b966d046afd1}{MODEL\_NBR}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a865a558f3ba75815d3e16750c1efc611}{FIRMWARE}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a001479a58fb44c39a29b20d565081a68}{ID}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a672286d33299eacb9b49203d71a7ff97}{BAUDRATE}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa7c5fbc22778e3526a497a2dedf7d4ff}{RETURN\_DELAY}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a977e7e0f97bc9bd210e2ee47330d47ee}{CW\_ANGLE\_LIMIT}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4badec749099b0e079a36fac41c2ee61}{CCW\_ANGLE\_LIMIT}},}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89516e9f0a6c049822f94cd68d2e1d52}{TEMP\_LIMIT}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a07446d7132c48f9b03aaa913bba890e3}{MIN\_VOLT\_LIMIT}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a0320f8018a7ff1d6166b6bd5998f1e6f}{MAX\_VOLT\_LIMIT}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad3add5f5967aaf6c37919ecf9fab415b}{MAX\_TORQUE}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a70aa9e4c76501e18f0b2861af53994be}{STATUS\_RETURN}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abb3bec83901c4c68db572e891d6a6d7b}{ALARM\_LED}},}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7690b021f467450541d8d89123429d40}{SHUTDOWN}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a5033ebe2d1984590c6b5355c648a769a}{MULTITURN\_OFFSET}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a2f1389ccd3e7a82466befd04e0e1b492}{RES\_DIVIDER}},}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ac13d9c2f71b63da4d32231d13fd95368}{TRQ\_ENABLE}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a21447137d62c46e603b924d455e8cd12}{LED}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4e0eeaaaab4c5b1e60dd18090617448d}{D\_GAIN}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62add1d0d6eef444b0f5fb36c63a76b1627}{I\_GAIN}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1102efcbd9e5a98cbf246ad8d1ace9b4}{P\_GAIN}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a378a4859a0872e2fc59fbae632f99022}{GOAL\_POS}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62adc54c13e333f290422cdb80404ff6ba2}{MOVING\_SPEED}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a6d52448c472a4078663e0714650c8d36}{TORQUE\_LIMIT}},\ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abcd223fc6a6245937dda6d2f2aeae216}{PRESENT\_POS}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62aa73886b775d9d0613755864df6d6950d}{PRESENT\_SPEED}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a81d27954f3dae428bb4b6d28dbff10a6}{PRESENT\_LOAD}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62ad4f9c69c48b62664b0b83eb2b2bb8612}{PRESENT\_VOLT}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a1972f56cbd55a45614ddea9d598f0bf1}{PRESENT\_TEMP}},\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a89af859e5ad61a519a9e407a67b26568}{REGISTERED}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a16ebdcb23eb5337fd5bc598fa8d6035d}{MOVING}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a438b68412f24003b09e0993b62dc7b48}{LOCK}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62af3cb30feedc837a971b1907f1a96db5e}{PUNCH}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a42d526b5a1a8e2c45cd36659a3c1cd86}{REALTIME\_TICK}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a7770173898835c0954853cb16e8d284a}{CURRENT}},\ }
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a3efd6aed9ee6bf1158edcf56dec2b575}{TRQ\_MODE\_ENABLE}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a10d7494cebb7da3f72e2ee50a00935f1}{GOAL\_TORQUE}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abf6418a2d316f426bf5706cf0b148c11}{GOAL\_ACC}},}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abe7d343d59a155690678d610bc2bcdcf}{NBR\_FIELDS}},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a67662f9d7544070fd11f620b0f9fce2a}{UNDEF\_F}}}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}\ \{}
+\DoxyCodeLine{00118\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a8173074f6ef29161f12bf482af57ece8}{m\_unique\_motor\_models\_list}};\ \ \ \textcolor{comment}{//\ List\ of\ unique\ motor\ models\ used\ in\ the\ robot}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aeee5c5a15b1e73985886f2fe758d749d}{populate\_control\_table}}(\textcolor{keywordtype}{char}*\ path\_to\_KMR\_dxl);}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a4e16b2fe6541a25046405ab64bd80f22}{parse\_motor\_config}}(\textcolor{keywordtype}{char}*\ config\_file);}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\_models}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_abbb3d6454819ec1b0846a20ff53fb66b}{string2Motors\_models}}(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a7c84b0b3dd181a18d7c607ea0477e468}{string2Fields}}(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_af9cc0889eb13fde7a78ab83e2ee8049e}{dataNode2Motor\_data\_field}}(\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Data__node}{Data\_node}}\&\ data\_node,\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\_data\_field}}\&\ motor\_data\_field);}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aade7a1ebf1ad09991420b525ff310321}{motorNode2Motor}}(\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__node}{Motor\_node}}\&\ motor\_node,\ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}}\&\ motor);}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a89b6692f978819bd144097c1bd0fe801}{update\_unique\_models\_list}}(std::string\ motor\_model\_string);}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a7e298a7b5d85fd6e50023fd0151336d6}{Motor\_models}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a9726553df1343b81a296e34ba64fe359}{getModelFromID}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a6c69e4bbb65c8206a3f243b90d7f11f0}{saveControlValuesToMotors}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a21e64c053698867005f465f10836c427}{m\_tot\_nbr\_motors}};\ \ \ \textcolor{comment}{//\ Number\ of\ motors\ used\ in\ the\ robot}}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}}*\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aad55dcd1593c39d8ba118f5992697c47}{m\_motors\_list}};\ \ \ \ \ \textcolor{comment}{//\ List\ containing\ all\ motors'\ info\ }}
+\DoxyCodeLine{00134\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aca9ff4227133e3c5a16050a850e997c8}{m\_all\_IDs}};\ \ \textcolor{comment}{//\ All\ motor\ IDs\ in\ the\ robot}}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\_data\_field}}**\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_ac898753b2114cab087872bed5f5c369d}{m\_control\_table}};\ \ \ \textcolor{comment}{//\ Table\ containing\ all\ Dynamixel\ control\ values\ for\ every\ model}}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Control__modes}{Control\_modes}}*\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aa4ff4182250e5dbc198aa3079e6771d5}{m\_controlModesPerModel}};\ \textcolor{comment}{//\ List\ of\ control\ modes\ values\ for\ each\ Dxl\ model}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a7adac80c8c7c2d0c48b93ae9a75bd3cb}{Hal}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_ab3f66c6a63feaee2a55a43699712013b}{\string~Hal}}();}
+\DoxyCodeLine{00140\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a9006f80377e7c316aa2220834e5bc277}{init}}(\textcolor{keywordtype}{char}*\ motor\_config\_file,\ \textcolor{keywordtype}{char}*\ path\_to\_KMR\_dxl);}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_aeccf49fff0727ceb7e25a2880df944f8}{get\_ID\_list\_from\_motors\_list}}();}
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field}{Motor\_data\_field}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a82ab54d41e69f9f5e59b9b50407fa068}{getControlParametersFromID}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ field);\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a860e649b502bf80e64eeefd8bb982d4c}{getMotorsListIndexFromID}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor}{Motor}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a19d631958816ecf147ba45840a878449}{getMotorFromID}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_adf85066d3d88b2f27f0ffb39fbcdd91e}{updateResetStatus}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ status);}
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00152\ }
+
+\end{DoxyCode}

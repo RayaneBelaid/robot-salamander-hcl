@@ -1,0 +1,216 @@
+\doxysection{Robot Class Reference}
+\hypertarget{classRobot}{}\label{classRobot}\index{Robot@{Robot}}
+
+
+{\ttfamily \#include $<$robot.\+hpp$>$}
+
+
+
+Inheritance diagram for Robot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{d9/d6b/classRobot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Robot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d83/classRobot__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRobot_ae4fc25df0af461357d3ba1020cfca9ff}{Robot}} (std\+::vector$<$ int $>$ all\+\_\+ids, const char \texorpdfstring{$\ast$}{*}port\+\_\+name, int baudrate, \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{KMR\+::dxl\+P1\+::\+Hal}} hal)
+\begin{DoxyCompactList}\small\item\em Constructor for Lib\+Robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_a6e237131559176b242caa699b94c5ecf}{write\+Data}} (std\+::vector$<$ float $>$ angles, std\+::vector$<$ int $>$ ids)
+\item 
+void \mbox{\hyperlink{classRobot_a4047ab0e78b0d71b7b9fe2b35c40283c}{read\+Data}} (std\+::vector$<$ int $>$ ids, std\+::vector$<$ float $>$ \&\mbox{\hyperlink{speedTest__dxlP1_8cpp_a471b9a3284cbcc29aeb5f1c3f90ef6dc}{fbck\+\_\+angles}})
+\item 
+void \mbox{\hyperlink{classRobot_a99520e9b228198aed6679136121be854}{write\+LEDs}} (std\+::vector$<$ int $>$ \mbox{\hyperlink{speedTest__dxlP1_8cpp_a9e3026d27bbf8fd952cee0a186c9abff}{goal\+\_\+leds}}, std\+::vector$<$ int $>$ ids)
+\item 
+void \mbox{\hyperlink{classRobot_a2a45d485ff5da398edcd26ed5224949c}{read\+Enabled}} (std\+::vector$<$ int $>$ ids, std\+::vector$<$ float $>$ \&\mbox{\hyperlink{speedTest__dxlP1_8cpp_af64c3b785285d921f7cda3fcbf5e5e01}{fbck\+\_\+enabled}})
+\item 
+void \mbox{\hyperlink{classRobot_ab488f6a21c89f82fe3662c48d72f36f5}{read\+LEDs}} (std\+::vector$<$ int $>$ ids, std\+::vector$<$ float $>$ \&\mbox{\hyperlink{speedTest__dxlP1_8cpp_af95c63a39bc09d55df83b3034f6fcd8b}{fbck\+\_\+leds}})
+\item 
+void \mbox{\hyperlink{classRobot_a8c09a44e0b77da66eeda95cb7a5842eb}{check\+Mode}} (std\+::vector$<$ int $>$ ids)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ae06b71f97f1858cd5c1a1c4df4dae914}{Base\+Robot}} (std\+::vector$<$ int $>$ all\+\_\+ids, const char \texorpdfstring{$\ast$}{*}port\+\_\+name, int baudrate, \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} hal)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_acf9098f7d433232086d954843f705c3a}{\texorpdfstring{$\sim$}{\string~}\+Base\+Robot}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_af272901f64f8137520f950dc65d8db0e}{enable\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em Enable all the motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aff7e4b07629ef8928ba849e4f8afe158}{enable\+Motors}} (std\+::vector$<$ int $>$ ids)
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a674c201e68b73da999969d8b1232954f}{disable\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em Disable all the motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a16a9da198d02b8a6e92e8b4118a19ea5}{disable\+Motors}} (std\+::vector$<$ int $>$ ids)
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a35a1d32d53c7d087ac744bde8f6c4fc9}{reset\+Multiturn\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em Reset multiturn motors flagged as needing a reset, using the default 1ms sleep time. ~\newline
+ Use the overloaded function to set a custom value as argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aee938767c88fbb2579c03f89bb08c34e}{reset\+Multiturn\+Motors}} (int sleep\+\_\+time\+\_\+us)
+\begin{DoxyCompactList}\small\item\em Reset multiturn motors flagged as needing a reset, with input sleeping time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{KMR\+::dxl\+P1\+::\+Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRobot_a2d028e36d975089678117edb1dd550d2}{m\+\_\+writer}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{KMR\+::dxl\+P1\+::\+Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRobot_a8974feeff4cb3f34ca07cba72fec389e}{m\+\_\+led\+\_\+writer}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRobot_a2839307214a5e0165201451a78ba3e0f}{m\+\_\+reader}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRobot_ab64b69cde5aee02216942a5aed84aeae}{m\+\_\+enabled\+\_\+reader}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRobot_acffea6847553069490d5f872018cc9a0}{m\+\_\+led\+\_\+reader}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRobot_a6f9f4c456981b7f488fecb320ff7d04b}{m\+\_\+\+CW\+\_\+reader}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}}}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a1ef1e1386c6cfd84af994b409ac636b3}{scanned\+\_\+motor\+\_\+models}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\+\_\+hal}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aca9ff4227133e3c5a16050a850e997c8}{m\+\_\+all\+\_\+\+IDs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_acaa72fc3d380506df9155b5f66b74f49}{init\+\_\+comm}} (const char \texorpdfstring{$\ast$}{*}port\+\_\+name, int baudrate, float protocol\+\_\+version)
+\begin{DoxyCompactList}\small\item\em Initialize the serial communication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ada7e2ecd7e36f8ed7e09ac953f4b0b34}{check\+\_\+comm}} ()
+\begin{DoxyCompactList}\small\item\em Ping each motor to validate the communication is working. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a8fd515216f787718265d67c717ff8b36}{set\+Multiturn\+Control\+\_\+single\+Motor}} (int id)
+\begin{DoxyCompactList}\small\item\em Set single motor to multiturn mode. Used for multiturn reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a72a23793b7ed92a61f2fd59f8280dd60}{set\+Position\+Control\+\_\+single\+Motor}} (int id)
+\begin{DoxyCompactList}\small\item\em Set single motor to position control mode. Used for multiturn reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a139b55dd60f5dc524f5ec2af46da7023}{set\+Torque\+Control\+\_\+single\+Motor}} (int id, int on\+\_\+off)
+\begin{DoxyCompactList}\small\item\em Set single motor to torque control mode. Used for multiturn reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}}}
+\begin{DoxyCompactItemize}
+\item 
+dynamixel\+::\+Port\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a93b185c722b9f661772caa4b4f4b34e1}{port\+Handler\+\_\+}}
+\item 
+dynamixel\+::\+Packet\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aa72e6c819f0d93da403901c13133e613}{packet\+Handler\+\_\+}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ad574ce7354b5147c93406752bd12abf4}{m\+\_\+motor\+\_\+enabler}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a8c3c2fbac9e3bbd523131eacd14efa5d}{m\+\_\+\+CW\+\_\+limit}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aac65b75303e1cb6ecd3451418a0baa40}{m\+\_\+\+CCW\+\_\+limit}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_af92fe6920df160e08b07a2464cada4c7}{m\+\_\+torque\+\_\+control}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRobot_ae4fc25df0af461357d3ba1020cfca9ff}\label{classRobot_ae4fc25df0af461357d3ba1020cfca9ff} 
+\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRobot}{Robot}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{all\+\_\+ids,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{port\+\_\+name,  }\item[{int}]{baudrate,  }\item[{\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{KMR\+::dxl\+P1\+::\+Hal}}}]{hal }\end{DoxyParamCaption})}
+
+
+
+Constructor for Lib\+Robot. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num\+\_\+motors} & Number of motors in the robot \\
+\hline
+\mbox{\texttt{ in}}  & {\em all\+\_\+ids} & List of IDs of all the motors in the robot \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baudrate of the port handling communication with motors \\
+\hline
+\mbox{\texttt{ in}}  & {\em port\+\_\+name} & Name of the port handling communication with motors \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRobot_a8c09a44e0b77da66eeda95cb7a5842eb}\label{classRobot_a8c09a44e0b77da66eeda95cb7a5842eb} 
+\index{Robot@{Robot}!checkMode@{checkMode}}
+\index{checkMode@{checkMode}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{checkMode()}{checkMode()}}
+{\footnotesize\ttfamily void check\+Mode (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+\Hypertarget{classRobot_a4047ab0e78b0d71b7b9fe2b35c40283c}\label{classRobot_a4047ab0e78b0d71b7b9fe2b35c40283c} 
+\index{Robot@{Robot}!readData@{readData}}
+\index{readData@{readData}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily void read\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids,  }\item[{std\+::vector$<$ float $>$ \&}]{fbck\+\_\+angles }\end{DoxyParamCaption})}
+
+\Hypertarget{classRobot_a2a45d485ff5da398edcd26ed5224949c}\label{classRobot_a2a45d485ff5da398edcd26ed5224949c} 
+\index{Robot@{Robot}!readEnabled@{readEnabled}}
+\index{readEnabled@{readEnabled}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{readEnabled()}{readEnabled()}}
+{\footnotesize\ttfamily void read\+Enabled (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids,  }\item[{std\+::vector$<$ float $>$ \&}]{fbck\+\_\+enabled }\end{DoxyParamCaption})}
+
+\Hypertarget{classRobot_ab488f6a21c89f82fe3662c48d72f36f5}\label{classRobot_ab488f6a21c89f82fe3662c48d72f36f5} 
+\index{Robot@{Robot}!readLEDs@{readLEDs}}
+\index{readLEDs@{readLEDs}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{readLEDs()}{readLEDs()}}
+{\footnotesize\ttfamily void read\+LEDs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids,  }\item[{std\+::vector$<$ float $>$ \&}]{fbck\+\_\+leds }\end{DoxyParamCaption})}
+
+\Hypertarget{classRobot_a6e237131559176b242caa699b94c5ecf}\label{classRobot_a6e237131559176b242caa699b94c5ecf} 
+\index{Robot@{Robot}!writeData@{writeData}}
+\index{writeData@{writeData}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{writeData()}{writeData()}}
+{\footnotesize\ttfamily void write\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{angles,  }\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+\Hypertarget{classRobot_a99520e9b228198aed6679136121be854}\label{classRobot_a99520e9b228198aed6679136121be854} 
+\index{Robot@{Robot}!writeLEDs@{writeLEDs}}
+\index{writeLEDs@{writeLEDs}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{writeLEDs()}{writeLEDs()}}
+{\footnotesize\ttfamily void write\+LEDs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{goal\+\_\+leds,  }\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classRobot_a6f9f4c456981b7f488fecb320ff7d04b}\label{classRobot_a6f9f4c456981b7f488fecb320ff7d04b} 
+\index{Robot@{Robot}!m\_CW\_reader@{m\_CW\_reader}}
+\index{m\_CW\_reader@{m\_CW\_reader}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{m\_CW\_reader}{m\_CW\_reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}}\texorpdfstring{$\ast$}{*} m\+\_\+\+CW\+\_\+reader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRobot_ab64b69cde5aee02216942a5aed84aeae}\label{classRobot_ab64b69cde5aee02216942a5aed84aeae} 
+\index{Robot@{Robot}!m\_enabled\_reader@{m\_enabled\_reader}}
+\index{m\_enabled\_reader@{m\_enabled\_reader}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{m\_enabled\_reader}{m\_enabled\_reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}}\texorpdfstring{$\ast$}{*} m\+\_\+enabled\+\_\+reader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRobot_acffea6847553069490d5f872018cc9a0}\label{classRobot_acffea6847553069490d5f872018cc9a0} 
+\index{Robot@{Robot}!m\_led\_reader@{m\_led\_reader}}
+\index{m\_led\_reader@{m\_led\_reader}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{m\_led\_reader}{m\_led\_reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}}\texorpdfstring{$\ast$}{*} m\+\_\+led\+\_\+reader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRobot_a8974feeff4cb3f34ca07cba72fec389e}\label{classRobot_a8974feeff4cb3f34ca07cba72fec389e} 
+\index{Robot@{Robot}!m\_led\_writer@{m\_led\_writer}}
+\index{m\_led\_writer@{m\_led\_writer}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{m\_led\_writer}{m\_led\_writer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{KMR\+::dxl\+P1\+::\+Writer}}\texorpdfstring{$\ast$}{*} m\+\_\+led\+\_\+writer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRobot_a2839307214a5e0165201451a78ba3e0f}\label{classRobot_a2839307214a5e0165201451a78ba3e0f} 
+\index{Robot@{Robot}!m\_reader@{m\_reader}}
+\index{m\_reader@{m\_reader}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{m\_reader}{m\_reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Reader}{KMR\+::dxl\+P1\+::\+Reader}}\texorpdfstring{$\ast$}{*} m\+\_\+reader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRobot_a2d028e36d975089678117edb1dd550d2}\label{classRobot_a2d028e36d975089678117edb1dd550d2} 
+\index{Robot@{Robot}!m\_writer@{m\_writer}}
+\index{m\_writer@{m\_writer}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{m\_writer}{m\_writer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{KMR\+::dxl\+P1\+::\+Writer}}\texorpdfstring{$\ast$}{*} m\+\_\+writer\hspace{0.3cm}{\ttfamily [private]}}
+

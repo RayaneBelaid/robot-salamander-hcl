@@ -1,0 +1,5 @@
+<map id="BaseRobot" name="BaseRobot">
+<area shape="rect" id="Node000001" title="Class that defines a base robot, to be inherited by a robot class in the project." alt="" coords="5,5,91,31"/>
+<area shape="rect" id="Node000002" href="$de/d78/classRobot.html" title=" " alt="" coords="20,79,76,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,46,51,79,45,79,45,46"/>
+</map>

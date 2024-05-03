@@ -1,0 +1,327 @@
+\doxysection{Writer Class Reference}
+\hypertarget{classKMR_1_1dxlP1_1_1Writer}{}\label{classKMR_1_1dxlP1_1_1Writer}\index{Writer@{Writer}}
+
+
+Custom \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer} class that contains a dynamixel\+::\+Group\+Sync\+Write object.  
+
+
+
+
+{\ttfamily \#include $<$KMR\+\_\+dxl\+P1\+\_\+writer.\+hpp$>$}
+
+
+
+Inheritance diagram for Writer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{de/d78/classKMR_1_1dxlP1_1_1Writer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Writer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de2/classKMR_1_1dxlP1_1_1Writer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a5cdb5b54a546cbe2592c1df1035e5e43}{Writer}} (\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} field, std\+::vector$<$ int $>$ ids, dynamixel\+::\+Port\+Handler \texorpdfstring{$\ast$}{*}port\+Handler, dynamixel\+::\+Packet\+Handler \texorpdfstring{$\ast$}{*}packet\+Handler, \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} hal)
+\begin{DoxyCompactList}\small\item\em Constructor for a \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer} handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aae70eb69ebff438b5ddb0cef01979d1f}{\texorpdfstring{$\sim$}{\string~}\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c}{add\+Data\+To\+Write}} (std\+::vector$<$ T $>$ data, std\+::vector$<$ int $>$ ids)
+\begin{DoxyCompactList}\small\item\em Add data to the list to be sent later with sync\+Write. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_abb7dfb8e49cb7ca54b8d007b1f947730}{sync\+Write}} (std\+::vector$<$ int $>$ ids)
+\begin{DoxyCompactList}\small\item\em Send the previously prepared data with add\+Data\+To\+Write to motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a2d8fb15d86c20f33d356c0c3f04640ed}{angle2\+Position}} (float angle, int id)
+\begin{DoxyCompactList}\small\item\em Convert angle input into position data based on motor model provided. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a802bc63f00f0d1c307fdceff33bc3d1b}{bind\+Parameter}} (int lower\+\_\+bound, int upper\+\_\+bound, int \&param)
+\begin{DoxyCompactList}\small\item\em Saturate input value between input limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a75d3de695355bfa13afe00eb650b0174}{populate\+Data\+Param}} (int32\+\_\+t data, int motor\+\_\+idx, int field\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Save a parametrized data into the general table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a2b22d629c781c6df1333cde40d064144}{clear\+Param}} ()
+\begin{DoxyCompactList}\small\item\em Clear the parameters list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a4c786197339765a33771f72e116ea956}{add\+Param}} (uint8\+\_\+t id, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Add data to be written to a motor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a4a4eab52b5a4039266447af3c6b2f59d}{multiturn\+Over\+Limit}} (int position)
+\begin{DoxyCompactList}\small\item\em Check if the goal position will place the motor over a full turn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dynamixel\+::\+Group\+Sync\+Write \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a7c48c8148c4a878d100e729fb287dd10}{m\+\_\+group\+Sync\+Writer}}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a800c9cae5995c578116a81056f466f2d}{m\+\_\+data\+Param}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a1edc77c77d08198e037a98a1f3967916}{m\+\_\+ids}}
+\item 
+\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\+\_\+field}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_abc45bddc1302ccd8b2c2433e07e2f5fe}{check\+Motor\+Compatibility}} (\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} field)
+\begin{DoxyCompactList}\small\item\em Check if the motors are compatible for a given field\+: same address for data storing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a8de53c414d3271698e44e73117477459}{get\+Data\+Byte\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Calculate and store the byte length of data read/written by the handler. ~\newline
+ Also check if the motors are field-\/compatible (same data lengths required for a given field) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4e8df53dbb8f7aa0e3cb173c2b3bd795}{check\+IDvalidity}} (std\+::vector$<$ int $>$ ids)
+\begin{DoxyCompactList}\small\item\em Check if query motors are handled by this specific handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a84bf1841bdb81a55f496967d00e75025}{check\+Field\+Validity}} (\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}} field)
+\begin{DoxyCompactList}\small\item\em Check if query field is handled by this specific handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4f629fdf7c5f071d23458adb300f8f7c}{get\+Motor\+Index\+From\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Get the index of a motor in the list of handled motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+dynamixel\+::\+Packet\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_aa72e6c819f0d93da403901c13133e613}{packet\+Handler\+\_\+}}
+\item 
+dynamixel\+::\+Port\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a93b185c722b9f661772caa4b4f4b34e1}{port\+Handler\+\_\+}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\+\_\+hal}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a806015d8cd8778f5f84c53ee8a6fb070}{m\+\_\+data\+\_\+address}} = -\/1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_afac4a02908a1202a11dc4d0acbdd4e93}{m\+\_\+data\+\_\+byte\+\_\+size}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer} class that contains a dynamixel\+::\+Group\+Sync\+Write object. 
+
+This custom \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer} class simplifies greatly the creation of dynamixel writing handlers. ~\newline
+ It takes care automatically of address assignment, even for indirect address handling. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a5cdb5b54a546cbe2592c1df1035e5e43}\label{classKMR_1_1dxlP1_1_1Writer_a5cdb5b54a546cbe2592c1df1035e5e43} 
+\index{Writer@{Writer}!Writer@{Writer}}
+\index{Writer@{Writer}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{Writer()}{Writer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}}]{field,  }\item[{std\+::vector$<$ int $>$}]{ids,  }\item[{dynamixel\+::\+Port\+Handler \texorpdfstring{$\ast$}{*}}]{port\+Handler,  }\item[{dynamixel\+::\+Packet\+Handler \texorpdfstring{$\ast$}{*}}]{packet\+Handler,  }\item[{\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}}]{hal }\end{DoxyParamCaption})}
+
+
+
+Constructor for a \doxylink{classKMR_1_1dxlP1_1_1Writer}{Writer} handler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em list\+\_\+fields} & List of fields to be handled by the writer \\
+\hline
+\mbox{\texttt{ in}}  & {\em ids} & Motors to be handled by the writer \\
+\hline
+\mbox{\texttt{ in}}  & {\em port\+Handler} & Object handling port communication \\
+\hline
+\mbox{\texttt{ in}}  & {\em packet\+Handler} & Object handling packets \\
+\hline
+\mbox{\texttt{ in}}  & {\em hal} & Previouly initialized \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal} object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_aae70eb69ebff438b5ddb0cef01979d1f}\label{classKMR_1_1dxlP1_1_1Writer_aae70eb69ebff438b5ddb0cef01979d1f} 
+\index{Writer@{Writer}!````~Writer@{\texorpdfstring{$\sim$}{\string~}Writer}}
+\index{````~Writer@{\texorpdfstring{$\sim$}{\string~}Writer}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Writer()}{\string~Writer()}}
+{\footnotesize\ttfamily \texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c}\label{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c} 
+\index{Writer@{Writer}!addDataToWrite@{addDataToWrite}}
+\index{addDataToWrite@{addDataToWrite}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{addDataToWrite()}{addDataToWrite()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void add\+Data\+To\+Write (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{data,  }\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+
+
+Add data to the list to be sent later with sync\+Write. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Data to be sent to motors (eg, new goal positions), in SI units. ~\newline
+ NB\+: If only one value is input, it will be sent to all input motors \\
+\hline
+\mbox{\texttt{ in}}  & {\em field} & Control field to receive the data \\
+\hline
+\mbox{\texttt{ in}}  & {\em ids} & List of motors that will receive the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a4c786197339765a33771f72e116ea956}\label{classKMR_1_1dxlP1_1_1Writer_a4c786197339765a33771f72e116ea956} 
+\index{Writer@{Writer}!addParam@{addParam}}
+\index{addParam@{addParam}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{addParam()}{addParam()}}
+{\footnotesize\ttfamily bool add\+Param (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Add data to be written to a motor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID of the motor \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Parametrized data to be sent to the motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & true if data-\/to-\/send added to the list successfully \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a2d8fb15d86c20f33d356c0c3f04640ed}\label{classKMR_1_1dxlP1_1_1Writer_a2d8fb15d86c20f33d356c0c3f04640ed} 
+\index{Writer@{Writer}!angle2Position@{angle2Position}}
+\index{angle2Position@{angle2Position}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{angle2Position()}{angle2Position()}}
+{\footnotesize\ttfamily int angle2\+Position (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert angle input into position data based on motor model provided. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em angle} & Angle to be converted, in rad \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID of the motor to receive the position input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position value corresponding to the joint angle (0 degrees or rad -\/\texorpdfstring{$>$}{>} mid-\/position) 
+\end{DoxyReturn}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a802bc63f00f0d1c307fdceff33bc3d1b}\label{classKMR_1_1dxlP1_1_1Writer_a802bc63f00f0d1c307fdceff33bc3d1b} 
+\index{Writer@{Writer}!bindParameter@{bindParameter}}
+\index{bindParameter@{bindParameter}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{bindParameter()}{bindParameter()}}
+{\footnotesize\ttfamily void bind\+Parameter (\begin{DoxyParamCaption}\item[{int}]{lower\+\_\+bound,  }\item[{int}]{upper\+\_\+bound,  }\item[{int \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Saturate input value between input limits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lower\+\_\+bound} & Min. value the input can take \\
+\hline
+\mbox{\texttt{ in}}  & {\em upper\+\_\+bound} & Max. value the input can take \\
+\hline
+ & {\em \mbox{[}in/out\mbox{]}} & param Input value to be saturated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a2b22d629c781c6df1333cde40d064144}\label{classKMR_1_1dxlP1_1_1Writer_a2b22d629c781c6df1333cde40d064144} 
+\index{Writer@{Writer}!clearParam@{clearParam}}
+\index{clearParam@{clearParam}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{clearParam()}{clearParam()}}
+{\footnotesize\ttfamily void clear\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Clear the parameters list. 
+
+
+
+Implements \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ae6ed43b32d9f360ab998cf51646b7a7c}{Handler}}.
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a4a4eab52b5a4039266447af3c6b2f59d}\label{classKMR_1_1dxlP1_1_1Writer_a4a4eab52b5a4039266447af3c6b2f59d} 
+\index{Writer@{Writer}!multiturnOverLimit@{multiturnOverLimit}}
+\index{multiturnOverLimit@{multiturnOverLimit}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{multiturnOverLimit()}{multiturnOverLimit()}}
+{\footnotesize\ttfamily bool multiturn\+Over\+Limit (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check if the goal position will place the motor over a full turn. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Parametrized goal position of a motor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Boolean} & 1 if over a full turn, 0 otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a75d3de695355bfa13afe00eb650b0174}\label{classKMR_1_1dxlP1_1_1Writer_a75d3de695355bfa13afe00eb650b0174} 
+\index{Writer@{Writer}!populateDataParam@{populateDataParam}}
+\index{populateDataParam@{populateDataParam}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{populateDataParam()}{populateDataParam()}}
+{\footnotesize\ttfamily void populate\+Data\+Param (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{data,  }\item[{int}]{motor\+\_\+idx,  }\item[{int}]{field\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save a parametrized data into the general table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Parametrized data to be sent to motor \\
+\hline
+\mbox{\texttt{ in}}  & {\em motor\+\_\+idx} & Index of the motor \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+idx} & Index of the field (type of data) \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+length} & Byte size of the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_abb7dfb8e49cb7ca54b8d007b1f947730}\label{classKMR_1_1dxlP1_1_1Writer_abb7dfb8e49cb7ca54b8d007b1f947730} 
+\index{Writer@{Writer}!syncWrite@{syncWrite}}
+\index{syncWrite@{syncWrite}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{syncWrite()}{syncWrite()}}
+{\footnotesize\ttfamily void sync\+Write (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+
+
+Send the previously prepared data with add\+Data\+To\+Write to motors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ids} & List of motors who will receive data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a800c9cae5995c578116a81056f466f2d}\label{classKMR_1_1dxlP1_1_1Writer_a800c9cae5995c578116a81056f466f2d} 
+\index{Writer@{Writer}!m\_dataParam@{m\_dataParam}}
+\index{m\_dataParam@{m\_dataParam}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{m\_dataParam}{m\_dataParam}}
+{\footnotesize\ttfamily uint8\+\_\+t\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} m\+\_\+data\+Param\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1Writer_a7c48c8148c4a878d100e729fb287dd10}\label{classKMR_1_1dxlP1_1_1Writer_a7c48c8148c4a878d100e729fb287dd10} 
+\index{Writer@{Writer}!m\_groupSyncWriter@{m\_groupSyncWriter}}
+\index{m\_groupSyncWriter@{m\_groupSyncWriter}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{m\_groupSyncWriter}{m\_groupSyncWriter}}
+{\footnotesize\ttfamily dynamixel\+::\+Group\+Sync\+Write\texorpdfstring{$\ast$}{*} m\+\_\+group\+Sync\+Writer\hspace{0.3cm}{\ttfamily [private]}}
+

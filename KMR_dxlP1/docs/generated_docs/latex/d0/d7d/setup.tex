@@ -1,0 +1,54 @@
+\chapter{How to setup}
+\hypertarget{setup}{}\label{setup}\index{How to setup@{How to setup}}
+\hypertarget{setup_autotoc_md6}{}\doxysection{\texorpdfstring{Dependencies}{Dependencies}}\label{setup_autotoc_md6}
+This library is dependent on the following libraries that need to be installed first\+:
+\begin{DoxyItemize}
+\item dynamixel\+: \href{https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/}{\texttt{ https\+://emanual.\+robotis.\+com/docs/en/software/dynamixel/dynamixel\+\_\+sdk/overview/}}
+\item yaml-\/cpp\+: \href{https://github.com/jbeder/yaml-cpp}{\texttt{ https\+://github.\+com/jbeder/yaml-\/cpp}}
+\item CMake
+\item (Doxygen and Graphviz if you wish to regenerate the documentation locally)
+\end{DoxyItemize}\hypertarget{setup_autotoc_md7}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{setup_autotoc_md7}
+This library does not need to be installed per se. It has to be built into a static library (.a) in a "{}build"{} folder\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{cmake\ ../}
+\DoxyCodeLine{cmake\ -\/-\/build\ .}
+
+\end{DoxyCode}
+ This will generate the static library "{}lib\+KMR\+\_\+dxl.\+a"{} in the "{}build"{} folder.
+
+In case you wish to regenerate the documentation locally, run 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ docs}
+
+\end{DoxyCode}
+ from the build folder. This will generate a "{}index.\+html"{} file in "{}docs/generated\+\_\+docs/html"{}.\hypertarget{setup_autotoc_md8}{}\doxysection{\texorpdfstring{Include in a project}{Include in a project}}\label{setup_autotoc_md8}
+It is very straightforward to include this library in a project. ~\newline
+All the headers are located in "{}\+KMR\+\_\+dxl/include"{}, and, as already mentioned, the static libraries in "{}\+KMR\+\_\+dxl/build"{}.
+
+In the root CMake\+Lists.\+txt of the project, add\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Path\ to\ KMR\_dxl's\ CMakeLists}
+\DoxyCodeLine{add\_subdirectory(path-\/to-\/KMR\_dxl)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Path\ to\ KMR\_dxl's\ header\ files}
+\DoxyCodeLine{target\_include\_directories(project\ PUBLIC\ path-\/to-\/KMR\_dxl/include)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Path\ to\ the\ static\ (.a)\ library}
+\DoxyCodeLine{target\_link\_directories(project\ PRIVATE\ path-\/to-\/KMR\_dxl/build)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Link\ the\ library}
+\DoxyCodeLine{target\_link\_libraries(project\ KMR\_dxl)}
+
+\end{DoxyCode}
+
+
+In the source code, only one header needs to be included\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}KMR\_dxl\_robot.hpp"{}}}
+
+\end{DoxyCode}
+
+
+Next\+: how to \doxysectlink{how-to-use}{use}{0} 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/4legs_controller.dir/4legs_controller.cpp.o CMakeFiles/4legs_controller.dir/source/robot.cpp.o -o 4legs_controller   -L/home/flduser/Downloads/exemple/KMR_dxlP1/build  -L/usr/local/lib  -Wl,-rpath,/home/flduser/Downloads/exemple/KMR_dxlP1/build:/usr/local/lib KMR_dxlP1/libKMR_dxlP1.a -lyaml-cpp -ldxl_x64_cpp 

@@ -1,0 +1,372 @@
+\doxysection{Base\+Robot Class Reference}
+\hypertarget{classKMR_1_1dxlP1_1_1BaseRobot}{}\label{classKMR_1_1dxlP1_1_1BaseRobot}\index{BaseRobot@{BaseRobot}}
+
+
+Class that defines a base robot, to be inherited by a robot class in the project.  
+
+
+
+
+{\ttfamily \#include $<$KMR\+\_\+dxl\+P1\+\_\+robot.\+hpp$>$}
+
+
+
+Inheritance diagram for Base\+Robot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{d0/d3f/classKMR_1_1dxlP1_1_1BaseRobot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Base\+Robot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d9d/classKMR_1_1dxlP1_1_1BaseRobot__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ae06b71f97f1858cd5c1a1c4df4dae914}{Base\+Robot}} (std\+::vector$<$ int $>$ all\+\_\+ids, const char \texorpdfstring{$\ast$}{*}port\+\_\+name, int baudrate, \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} hal)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_acf9098f7d433232086d954843f705c3a}{\texorpdfstring{$\sim$}{\string~}\+Base\+Robot}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_af272901f64f8137520f950dc65d8db0e}{enable\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em Enable all the motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aff7e4b07629ef8928ba849e4f8afe158}{enable\+Motors}} (std\+::vector$<$ int $>$ ids)
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a674c201e68b73da999969d8b1232954f}{disable\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em Disable all the motors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a16a9da198d02b8a6e92e8b4118a19ea5}{disable\+Motors}} (std\+::vector$<$ int $>$ ids)
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a35a1d32d53c7d087ac744bde8f6c4fc9}{reset\+Multiturn\+Motors}} ()
+\begin{DoxyCompactList}\small\item\em Reset multiturn motors flagged as needing a reset, using the default 1ms sleep time. ~\newline
+ Use the overloaded function to set a custom value as argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aee938767c88fbb2579c03f89bb08c34e}{reset\+Multiturn\+Motors}} (int sleep\+\_\+time\+\_\+us)
+\begin{DoxyCompactList}\small\item\em Reset multiturn motors flagged as needing a reset, with input sleeping time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a1ef1e1386c6cfd84af994b409ac636b3}{scanned\+\_\+motor\+\_\+models}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\+\_\+hal}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aca9ff4227133e3c5a16050a850e997c8}{m\+\_\+all\+\_\+\+IDs}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_acaa72fc3d380506df9155b5f66b74f49}{init\+\_\+comm}} (const char \texorpdfstring{$\ast$}{*}port\+\_\+name, int baudrate, float protocol\+\_\+version)
+\begin{DoxyCompactList}\small\item\em Initialize the serial communication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ada7e2ecd7e36f8ed7e09ac953f4b0b34}{check\+\_\+comm}} ()
+\begin{DoxyCompactList}\small\item\em Ping each motor to validate the communication is working. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a8fd515216f787718265d67c717ff8b36}{set\+Multiturn\+Control\+\_\+single\+Motor}} (int id)
+\begin{DoxyCompactList}\small\item\em Set single motor to multiturn mode. Used for multiturn reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a72a23793b7ed92a61f2fd59f8280dd60}{set\+Position\+Control\+\_\+single\+Motor}} (int id)
+\begin{DoxyCompactList}\small\item\em Set single motor to position control mode. Used for multiturn reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a139b55dd60f5dc524f5ec2af46da7023}{set\+Torque\+Control\+\_\+single\+Motor}} (int id, int on\+\_\+off)
+\begin{DoxyCompactList}\small\item\em Set single motor to torque control mode. Used for multiturn reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dynamixel\+::\+Port\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a93b185c722b9f661772caa4b4f4b34e1}{port\+Handler\+\_\+}}
+\item 
+dynamixel\+::\+Packet\+Handler \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aa72e6c819f0d93da403901c13133e613}{packet\+Handler\+\_\+}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_ad574ce7354b5147c93406752bd12abf4}{m\+\_\+motor\+\_\+enabler}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_a8c3c2fbac9e3bbd523131eacd14efa5d}{m\+\_\+\+CW\+\_\+limit}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_aac65b75303e1cb6ecd3451418a0baa40}{m\+\_\+\+CCW\+\_\+limit}}
+\item 
+\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot_af92fe6920df160e08b07a2464cada4c7}{m\+\_\+torque\+\_\+control}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that defines a base robot, to be inherited by a robot class in the project. 
+
+This class contains base necessities for handling a robot with dynamixel motors. ~\newline
+ It provides functions to enable/disable motors, as well as to reset motors in multiturn. ~\newline
+ The user needs to create handlers they need (Writers and Readers) for their specific application, as well as their respective reading/writing functions 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_ae06b71f97f1858cd5c1a1c4df4dae914}\label{classKMR_1_1dxlP1_1_1BaseRobot_ae06b71f97f1858cd5c1a1c4df4dae914} 
+\index{BaseRobot@{BaseRobot}!BaseRobot@{BaseRobot}}
+\index{BaseRobot@{BaseRobot}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{BaseRobot()}{BaseRobot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{all\+\_\+ids,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{port\+\_\+name,  }\item[{int}]{baudrate,  }\item[{\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}}]{hal }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em all\+\_\+ids} & List of IDs of all the motors in the robot \\
+\hline
+\mbox{\texttt{ in}}  & {\em port\+\_\+name} & Name of the port handling the communication with motors \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baudrate of the port handling communication with motors \\
+\hline
+\mbox{\texttt{ in}}  & {\em hal} & Previously initialized \doxylink{classKMR_1_1dxlP1_1_1Hal}{Hal} object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_acf9098f7d433232086d954843f705c3a}\label{classKMR_1_1dxlP1_1_1BaseRobot_acf9098f7d433232086d954843f705c3a} 
+\index{BaseRobot@{BaseRobot}!````~BaseRobot@{\texorpdfstring{$\sim$}{\string~}BaseRobot}}
+\index{````~BaseRobot@{\texorpdfstring{$\sim$}{\string~}BaseRobot}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BaseRobot()}{\string~BaseRobot()}}
+{\footnotesize\ttfamily \texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classKMR_1_1dxlP1_1_1BaseRobot}{Base\+Robot}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_ada7e2ecd7e36f8ed7e09ac953f4b0b34}\label{classKMR_1_1dxlP1_1_1BaseRobot_ada7e2ecd7e36f8ed7e09ac953f4b0b34} 
+\index{BaseRobot@{BaseRobot}!check\_comm@{check\_comm}}
+\index{check\_comm@{check\_comm}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{check\_comm()}{check\_comm()}}
+{\footnotesize\ttfamily void check\+\_\+comm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Ping each motor to validate the communication is working. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a674c201e68b73da999969d8b1232954f}\label{classKMR_1_1dxlP1_1_1BaseRobot_a674c201e68b73da999969d8b1232954f} 
+\index{BaseRobot@{BaseRobot}!disableMotors@{disableMotors}}
+\index{disableMotors@{disableMotors}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{disableMotors()}{disableMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void disable\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disable all the motors. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a16a9da198d02b8a6e92e8b4118a19ea5}\label{classKMR_1_1dxlP1_1_1BaseRobot_a16a9da198d02b8a6e92e8b4118a19ea5} 
+\index{BaseRobot@{BaseRobot}!disableMotors@{disableMotors}}
+\index{disableMotors@{disableMotors}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{disableMotors()}{disableMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void disable\+Motors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_af272901f64f8137520f950dc65d8db0e}\label{classKMR_1_1dxlP1_1_1BaseRobot_af272901f64f8137520f950dc65d8db0e} 
+\index{BaseRobot@{BaseRobot}!enableMotors@{enableMotors}}
+\index{enableMotors@{enableMotors}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{enableMotors()}{enableMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void enable\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enable all the motors. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_aff7e4b07629ef8928ba849e4f8afe158}\label{classKMR_1_1dxlP1_1_1BaseRobot_aff7e4b07629ef8928ba849e4f8afe158} 
+\index{BaseRobot@{BaseRobot}!enableMotors@{enableMotors}}
+\index{enableMotors@{enableMotors}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{enableMotors()}{enableMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void enable\+Motors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_acaa72fc3d380506df9155b5f66b74f49}\label{classKMR_1_1dxlP1_1_1BaseRobot_acaa72fc3d380506df9155b5f66b74f49} 
+\index{BaseRobot@{BaseRobot}!init\_comm@{init\_comm}}
+\index{init\_comm@{init\_comm}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{init\_comm()}{init\_comm()}}
+{\footnotesize\ttfamily void init\+\_\+comm (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{port\+\_\+name,  }\item[{int}]{baudrate,  }\item[{float}]{protocol\+\_\+version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize the serial communication. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port\+\_\+name} & Name of the port handling communication with motors \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baudrate of the port handling communication with motors \\
+\hline
+\mbox{\texttt{ in}}  & {\em protocol\+\_\+version} & Protocol version, for the communication (U2\+D2) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a35a1d32d53c7d087ac744bde8f6c4fc9}\label{classKMR_1_1dxlP1_1_1BaseRobot_a35a1d32d53c7d087ac744bde8f6c4fc9} 
+\index{BaseRobot@{BaseRobot}!resetMultiturnMotors@{resetMultiturnMotors}}
+\index{resetMultiturnMotors@{resetMultiturnMotors}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{resetMultiturnMotors()}{resetMultiturnMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void reset\+Multiturn\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset multiturn motors flagged as needing a reset, using the default 1ms sleep time. ~\newline
+ Use the overloaded function to set a custom value as argument. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Make sure the motors had enough time to execute the goal position command before calling this function. Failure to do so results in undefined behavior. 
+\end{DoxyNote}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_aee938767c88fbb2579c03f89bb08c34e}\label{classKMR_1_1dxlP1_1_1BaseRobot_aee938767c88fbb2579c03f89bb08c34e} 
+\index{BaseRobot@{BaseRobot}!resetMultiturnMotors@{resetMultiturnMotors}}
+\index{resetMultiturnMotors@{resetMultiturnMotors}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{resetMultiturnMotors()}{resetMultiturnMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void reset\+Multiturn\+Motors (\begin{DoxyParamCaption}\item[{int}]{sleep\+\_\+time\+\_\+us }\end{DoxyParamCaption})}
+
+
+
+Reset multiturn motors flagged as needing a reset, with input sleeping time. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sleep\+\_\+time\+\_\+us} & Sleep time in microseconds after dis/enabling motors \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Make sure the motors had enough time to execute the goal position command before calling this function. Failure to do so results in undefined behavior. 
+\end{DoxyNote}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a8fd515216f787718265d67c717ff8b36}\label{classKMR_1_1dxlP1_1_1BaseRobot_a8fd515216f787718265d67c717ff8b36} 
+\index{BaseRobot@{BaseRobot}!setMultiturnControl\_singleMotor@{setMultiturnControl\_singleMotor}}
+\index{setMultiturnControl\_singleMotor@{setMultiturnControl\_singleMotor}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{setMultiturnControl\_singleMotor()}{setMultiturnControl\_singleMotor()}}
+{\footnotesize\ttfamily void set\+Multiturn\+Control\+\_\+single\+Motor (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set single motor to multiturn mode. Used for multiturn reset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} id to get set to multiturn mode \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a72a23793b7ed92a61f2fd59f8280dd60}\label{classKMR_1_1dxlP1_1_1BaseRobot_a72a23793b7ed92a61f2fd59f8280dd60} 
+\index{BaseRobot@{BaseRobot}!setPositionControl\_singleMotor@{setPositionControl\_singleMotor}}
+\index{setPositionControl\_singleMotor@{setPositionControl\_singleMotor}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{setPositionControl\_singleMotor()}{setPositionControl\_singleMotor()}}
+{\footnotesize\ttfamily void set\+Position\+Control\+\_\+single\+Motor (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set single motor to position control mode. Used for multiturn reset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} id to get set to control position mode \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a139b55dd60f5dc524f5ec2af46da7023}\label{classKMR_1_1dxlP1_1_1BaseRobot_a139b55dd60f5dc524f5ec2af46da7023} 
+\index{BaseRobot@{BaseRobot}!setTorqueControl\_singleMotor@{setTorqueControl\_singleMotor}}
+\index{setTorqueControl\_singleMotor@{setTorqueControl\_singleMotor}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{setTorqueControl\_singleMotor()}{setTorqueControl\_singleMotor()}}
+{\footnotesize\ttfamily void set\+Torque\+Control\+\_\+single\+Motor (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{on\+\_\+off }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set single motor to torque control mode. Used for multiturn reset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & \doxylink{structKMR_1_1dxlP1_1_1Motor}{Motor} id to get set to multiturn mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em on\+\_\+off} & 1/0 for enable/disable torque control mode \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_aca9ff4227133e3c5a16050a850e997c8}\label{classKMR_1_1dxlP1_1_1BaseRobot_aca9ff4227133e3c5a16050a850e997c8} 
+\index{BaseRobot@{BaseRobot}!m\_all\_IDs@{m\_all\_IDs}}
+\index{m\_all\_IDs@{m\_all\_IDs}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{m\_all\_IDs}{m\_all\_IDs}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ m\+\_\+all\+\_\+\+IDs}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_aac65b75303e1cb6ecd3451418a0baa40}\label{classKMR_1_1dxlP1_1_1BaseRobot_aac65b75303e1cb6ecd3451418a0baa40} 
+\index{BaseRobot@{BaseRobot}!m\_CCW\_limit@{m\_CCW\_limit}}
+\index{m\_CCW\_limit@{m\_CCW\_limit}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{m\_CCW\_limit}{m\_CCW\_limit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\texorpdfstring{$\ast$}{*} m\+\_\+\+CCW\+\_\+limit\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a8c3c2fbac9e3bbd523131eacd14efa5d}\label{classKMR_1_1dxlP1_1_1BaseRobot_a8c3c2fbac9e3bbd523131eacd14efa5d} 
+\index{BaseRobot@{BaseRobot}!m\_CW\_limit@{m\_CW\_limit}}
+\index{m\_CW\_limit@{m\_CW\_limit}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{m\_CW\_limit}{m\_CW\_limit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\texorpdfstring{$\ast$}{*} m\+\_\+\+CW\+\_\+limit\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a3322ee2dcd88c444e8cbc53a9d4648cf}\label{classKMR_1_1dxlP1_1_1BaseRobot_a3322ee2dcd88c444e8cbc53a9d4648cf} 
+\index{BaseRobot@{BaseRobot}!m\_hal@{m\_hal}}
+\index{m\_hal@{m\_hal}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{m\_hal}{m\_hal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}} m\+\_\+hal}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_ad574ce7354b5147c93406752bd12abf4}\label{classKMR_1_1dxlP1_1_1BaseRobot_ad574ce7354b5147c93406752bd12abf4} 
+\index{BaseRobot@{BaseRobot}!m\_motor\_enabler@{m\_motor\_enabler}}
+\index{m\_motor\_enabler@{m\_motor\_enabler}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{m\_motor\_enabler}{m\_motor\_enabler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\texorpdfstring{$\ast$}{*} m\+\_\+motor\+\_\+enabler\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_af92fe6920df160e08b07a2464cada4c7}\label{classKMR_1_1dxlP1_1_1BaseRobot_af92fe6920df160e08b07a2464cada4c7} 
+\index{BaseRobot@{BaseRobot}!m\_torque\_control@{m\_torque\_control}}
+\index{m\_torque\_control@{m\_torque\_control}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{m\_torque\_control}{m\_torque\_control}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\texorpdfstring{$\ast$}{*} m\+\_\+torque\+\_\+control\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_aa72e6c819f0d93da403901c13133e613}\label{classKMR_1_1dxlP1_1_1BaseRobot_aa72e6c819f0d93da403901c13133e613} 
+\index{BaseRobot@{BaseRobot}!packetHandler\_@{packetHandler\_}}
+\index{packetHandler\_@{packetHandler\_}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{packetHandler\_}{packetHandler\_}}
+{\footnotesize\ttfamily dynamixel\+::\+Packet\+Handler\texorpdfstring{$\ast$}{*} packet\+Handler\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a93b185c722b9f661772caa4b4f4b34e1}\label{classKMR_1_1dxlP1_1_1BaseRobot_a93b185c722b9f661772caa4b4f4b34e1} 
+\index{BaseRobot@{BaseRobot}!portHandler\_@{portHandler\_}}
+\index{portHandler\_@{portHandler\_}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{portHandler\_}{portHandler\_}}
+{\footnotesize\ttfamily dynamixel\+::\+Port\+Handler\texorpdfstring{$\ast$}{*} port\+Handler\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classKMR_1_1dxlP1_1_1BaseRobot_a1ef1e1386c6cfd84af994b409ac636b3}\label{classKMR_1_1dxlP1_1_1BaseRobot_a1ef1e1386c6cfd84af994b409ac636b3} 
+\index{BaseRobot@{BaseRobot}!scanned\_motor\_models@{scanned\_motor\_models}}
+\index{scanned\_motor\_models@{scanned\_motor\_models}!BaseRobot@{BaseRobot}}
+\doxysubsubsection{\texorpdfstring{scanned\_motor\_models}{scanned\_motor\_models}}
+{\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*} scanned\+\_\+motor\+\_\+models}
+

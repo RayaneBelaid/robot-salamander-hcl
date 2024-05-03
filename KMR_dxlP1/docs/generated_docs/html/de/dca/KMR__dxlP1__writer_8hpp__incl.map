@@ -1,0 +1,19 @@
+<map id="/home/katarina/local/KMR&#45;libraries/Dynamixel_p1/KMR_dxlP1/include/KMR_dxlP1_writer.hpp" name="/home/katarina/local/KMR&#45;libraries/Dynamixel_p1/KMR_dxlP1/include/KMR_dxlP1_writer.hpp">
+<area shape="rect" id="Node000001" title="Header for the KMR_dxlP1_writer.cpp file." alt="" coords="5,5,198,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="63,286,124,312"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,76,97,124,96,271,90,271,92,124,95,76"/>
+<area shape="rect" id="Node000003" href="$d2/d50/KMR__dxlP1__handler_8hpp.html" title="Header for the KMR_dxlP1_handler.cpp file." alt="" coords="107,124,269,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,74,169,110,165,114,131,78"/>
+<area shape="poly" id="edge9_Node000003_Node000002" title=" " alt="" coords="170,152,144,172,121,199,106,236,98,271,93,270,101,234,117,196,141,168,167,148"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="131,198,299,238"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="195,149,206,182,201,184,190,151"/>
+<area shape="rect" id="Node000005" href="$dc/d12/KMR__dxlP1__hal_8hpp.html" title="Header for KMR_dxlP1_hal.cpp file." alt="" coords="322,205,460,231"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="220,148,347,197,345,202,218,153"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="346,234,139,289,138,283,344,229"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="278,286,331,312"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="379,233,330,278,327,274,376,229"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="355,286,427,312"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="394,231,394,270,388,270,388,231"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="450,286,508,312"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="406,229,456,274,452,278,402,233"/>
+</map>

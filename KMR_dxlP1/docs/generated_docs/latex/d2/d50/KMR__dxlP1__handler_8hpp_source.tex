@@ -1,0 +1,45 @@
+\doxysection{KMR\+\_\+dxl\+P1\+\_\+handler.\+hpp}
+\hypertarget{KMR__dxlP1__handler_8hpp_source}{}\label{KMR__dxlP1__handler_8hpp_source}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_handler.hpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_handler.hpp}}
+\mbox{\hyperlink{KMR__dxlP1__handler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ KMR\_DXLP1\_HANDLER\_HPP}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ KMR\_DXLP1\_HANDLER\_HPP}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}dynamixel\_sdk/dynamixel\_sdk.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KMR__dxlP1__hal_8hpp}{KMR\_dxlP1\_hal.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceKMR_1_1dxlP1}{KMR::dxlP1}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a1edc77c77d08198e037a98a1f3967916}{m\_ids}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ All\ IDs\ handled\ by\ this\ specific\ handler}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\_field}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Field\ handled\ by\ this\ specific\ handler}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00041\ \ \ \ \ dynamixel::PacketHandler\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_aa72e6c819f0d93da403901c13133e613}{packetHandler\_}};}
+\DoxyCodeLine{00042\ \ \ \ \ dynamixel::PortHandler\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a93b185c722b9f661772caa4b4f4b34e1}{portHandler\_}};}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\_hal}};}
+\DoxyCodeLine{00044\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a806015d8cd8778f5f84c53ee8a6fb070}{m\_data\_address}}\ =\ -\/1;\ \ \ \ \ \ \textcolor{comment}{//\ Address\ where\ the\ data\ is\ written/read}}
+\DoxyCodeLine{00045\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_afac4a02908a1202a11dc4d0acbdd4e93}{m\_data\_byte\_size}}\ =\ 0;\ \ \ \ \ \ \ \textcolor{comment}{//\ Total\ data\ byte\ size\ handled\ by\ the\ handler\ \ }}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_abc45bddc1302ccd8b2c2433e07e2f5fe}{checkMotorCompatibility}}(\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ field);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a8de53c414d3271698e44e73117477459}{getDataByteSize}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4e8df53dbb8f7aa0e3cb173c2b3bd795}{checkIDvalidity}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a84bf1841bdb81a55f496967d00e75025}{checkFieldValidity}}(\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ field);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4f629fdf7c5f071d23458adb300f8f7c}{getMotorIndexFromID}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Methods\ that\ need\ to\ be\ implemented\ in\ child\ classes}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ae6ed43b32d9f360ab998cf51646b7a7c}{clearParam}}()\ =\ 0;\ \textcolor{comment}{//\ Pure\ Virtual\ Function}}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ namespace\ KMR::dxl}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

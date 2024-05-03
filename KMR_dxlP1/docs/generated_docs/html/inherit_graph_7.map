@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$db/db7/classKMR_1_1dxlP1_1_1Handler.html" title="Parent class, to be specialized as a Reader or Writer." alt="" coords="5,31,72,56"/>
+<area shape="rect" id="Node000001" href="$d3/d54/classKMR_1_1dxlP1_1_1Reader.html" title="Custom Reader class that contains a dynamixel::GroupSyncRead object." alt="" coords="120,5,182,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="86,30,119,23,120,28,87,35"/>
+<area shape="rect" id="Node000002" href="$d9/d9d/classKMR_1_1dxlP1_1_1Writer.html" title="Custom Writer class that contains a dynamixel::GroupSyncWrite object." alt="" coords="123,55,179,80"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="88,51,123,59,122,64,87,56"/>
+</map>

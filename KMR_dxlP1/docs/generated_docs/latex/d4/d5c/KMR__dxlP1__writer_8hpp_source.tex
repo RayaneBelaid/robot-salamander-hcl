@@ -1,0 +1,79 @@
+\doxysection{KMR\+\_\+dxl\+P1\+\_\+writer.\+hpp}
+\hypertarget{KMR__dxlP1__writer_8hpp_source}{}\label{KMR__dxlP1__writer_8hpp_source}\index{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_writer.hpp@{/home/katarina/local/KMR-\/libraries/Dynamixel\_p1/KMR\_dxlP1/include/KMR\_dxlP1\_writer.hpp}}
+\mbox{\hyperlink{KMR__dxlP1__writer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ KMR\_DXLP1\_WRITER\_HPP}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ KMR\_DXLP1\_WRITER\_HPP}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KMR__dxlP1__handler_8hpp}{KMR\_dxlP1\_handler.hpp}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceKMR_1_1dxlP1}{KMR::dxlP1}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler}{Handler}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ dynamixel::GroupSyncWrite\ *\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a7c48c8148c4a878d100e729fb287dd10}{m\_groupSyncWriter}};}
+\DoxyCodeLine{00033\ \ \ \ \ uint8\_t\ **\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a800c9cae5995c578116a81056f466f2d}{m\_dataParam}};\ \textcolor{comment}{//\ Table\ containing\ all\ parametrized\ data\ to\ be\ sent\ next\ step}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a2d8fb15d86c20f33d356c0c3f04640ed}{angle2Position}}(\textcolor{keywordtype}{float}\ angle,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a802bc63f00f0d1c307fdceff33bc3d1b}{bindParameter}}(\textcolor{keywordtype}{int}\ lower\_bound,\ \textcolor{keywordtype}{int}\ upper\_bound,\ \textcolor{keywordtype}{int}\ \&param);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a75d3de695355bfa13afe00eb650b0174}{populateDataParam}}(int32\_t\ data,\ \textcolor{keywordtype}{int}\ motor\_idx,\ \textcolor{keywordtype}{int}\ field\_length);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a2b22d629c781c6df1333cde40d064144}{clearParam}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a4c786197339765a33771f72e116ea956}{addParam}}(uint8\_t\ \textcolor{keywordtype}{id},\ uint8\_t*\ data);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a4a4eab52b5a4039266447af3c6b2f59d}{multiturnOverLimit}}(\textcolor{keywordtype}{int}\ position);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer}{Writer}}(\mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62}{Fields}}\ field,\ std::vector<int>\ ids,\ dynamixel::PortHandler\ *portHandler,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ dynamixel::PacketHandler\ *packetHandler,\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal}{Hal}}\ hal);}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aae70eb69ebff438b5ddb0cef01979d1f}{\string~Writer}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c}{addDataToWrite}}(std::vector<T>\ data,\ std::vector<int>\ ids);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_abb7dfb8e49cb7ca54b8d007b1f947730}{syncWrite}}(std::vector<int>\ ids);}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Templates\ need\ to\ be\ defined\ in\ hpp}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_aa5b2335198e2a95897a6cf8c698c396c}{Writer::addDataToWrite}}(std::vector<T>\ data,\ std::vector<int>\ ids)}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4e8df53dbb8f7aa0e3cb173c2b3bd795}{checkIDvalidity}}(ids);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ T\ current\_data;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ param\_data;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{float}\ units;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ motor\_idx\ =\ 0;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ ids.size();\ i++)}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ ids[i];}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ units\ =\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a3322ee2dcd88c444e8cbc53a9d4648cf}{m\_hal}}.\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Hal_a82ab54d41e69f9f5e59b9b50407fa068}{getControlParametersFromID}}(\textcolor{keywordtype}{id},\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\_field}}).\mbox{\hyperlink{structKMR_1_1dxlP1_1_1Motor__data__field_abd63c1b0b945732cc551229ae353bfc9}{unit}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ motor\_idx\ =\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_a4f629fdf7c5f071d23458adb300f8f7c}{getMotorIndexFromID}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (data.size()\ ==\ 1)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ current\_data\ =\ data[0];}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ current\_data\ =\ data[i];}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Transform\ data\ into\ its\ parametrized\ form\ and\ write\ it\ into\ the\ parametrized\ data\ matrix}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\_field}}\ !=\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a378a4859a0872e2fc59fbae632f99022}{GOAL\_POS}}\ \&\&\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\_field}}\ !=\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62abcd223fc6a6245937dda6d2f2aeae216}{PRESENT\_POS}}\ \&\&}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\_field}}\ !=\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a977e7e0f97bc9bd210e2ee47330d47ee}{CW\_ANGLE\_LIMIT}}\ \&\&\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_ac220c9e63f0f3d71249b8e0fdc4833fc}{m\_field}}\ !=\ \mbox{\hyperlink{namespaceKMR_1_1dxlP1_a40a205c796dfae164e27441b42317c62a4badec749099b0e079a36fac41c2ee61}{CCW\_ANGLE\_LIMIT}})\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ param\_data\ =\ current\_data\ /\ units;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ param\_data\ =\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a2d8fb15d86c20f33d356c0c3f04640ed}{angle2Position}}(current\_data,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Writer_a75d3de695355bfa13afe00eb650b0174}{populateDataParam}}(param\_data,\ motor\_idx,\ \mbox{\hyperlink{classKMR_1_1dxlP1_1_1Handler_afac4a02908a1202a11dc4d0acbdd4e93}{m\_data\_byte\_size}});}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

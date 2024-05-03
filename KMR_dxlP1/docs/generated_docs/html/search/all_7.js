@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['ccw_5fangle_5flimit_0',['CCW_ANGLE_LIMIT',['../d1/d17/namespaceKMR_1_1dxlP1.html#a40a205c796dfae164e27441b42317c62a4badec749099b0e079a36fac41c2ee61',1,'KMR::dxlP1']]],
+  ['check_5fcomm_1',['check_comm',['../d9/d09/classKMR_1_1dxlP1_1_1BaseRobot.html#ada7e2ecd7e36f8ed7e09ac953f4b0b34',1,'KMR::dxlP1::BaseRobot']]],
+  ['checkfieldvalidity_2',['checkFieldValidity',['../db/db7/classKMR_1_1dxlP1_1_1Handler.html#a84bf1841bdb81a55f496967d00e75025',1,'KMR::dxlP1::Handler']]],
+  ['checkidvalidity_3',['checkIDvalidity',['../db/db7/classKMR_1_1dxlP1_1_1Handler.html#a4e8df53dbb8f7aa0e3cb173c2b3bd795',1,'KMR::dxlP1::Handler']]],
+  ['checkmode_4',['checkMode',['../de/d78/classRobot.html#a8c09a44e0b77da66eeda95cb7a5842eb',1,'Robot']]],
+  ['checkmotorcompatibility_5',['checkMotorCompatibility',['../db/db7/classKMR_1_1dxlP1_1_1Handler.html#abc45bddc1302ccd8b2c2433e07e2f5fe',1,'KMR::dxlP1::Handler']]],
+  ['checkreadsuccessful_6',['checkReadSuccessful',['../d3/d54/classKMR_1_1dxlP1_1_1Reader.html#a31595f077cd94de8049b58a376c84be4',1,'KMR::dxlP1::Reader']]],
+  ['class_7',['II. Create your Robot class',['../d4/da5/how-to-use.html#autotoc_md12',1,'']]],
+  ['clearparam_8',['clearparam',['../db/db7/classKMR_1_1dxlP1_1_1Handler.html#ae6ed43b32d9f360ab998cf51646b7a7c',1,'KMR::dxlP1::Handler::clearParam()'],['../d3/d54/classKMR_1_1dxlP1_1_1Reader.html#a2b22d629c781c6df1333cde40d064144',1,'KMR::dxlP1::Reader::clearParam()'],['../d9/d9d/classKMR_1_1dxlP1_1_1Writer.html#a2b22d629c781c6df1333cde40d064144',1,'KMR::dxlP1::Writer::clearParam()']]],
+  ['concept_9',['Working concept',['../index.html#autotoc_md0',1,'']]],
+  ['configuration_20file_10',['Step 1: Write a motor configuration file',['../d4/da5/how-to-use.html#autotoc_md10',1,'']]],
+  ['contmultiturn_11',['contMultiturn',['../d1/de1/test__dxlP1_8cpp.html#a7e14da1ffd940310de3064f50b74d7c7',1,'test_dxlP1.cpp']]],
+  ['contmultiturn_5fspeedtests_12',['contMultiturn_speedTests',['../de/d5f/speedTest__dxlP1_8cpp.html#a57817cb5f8ef065a85bb5c34e4bb6381',1,'speedTest_dxlP1.cpp']]],
+  ['control_5fmodes_13',['control_modes',['../d4/de0/structKMR_1_1dxlP1_1_1Motor.html#a048f8e6d600c63605637e067f1c5afd7',1,'KMR::dxlP1::Motor::control_modes'],['../d5/dde/structKMR_1_1dxlP1_1_1Control__modes.html',1,'Control_modes']]],
+  ['convert_3c_20kmr_3a_3adxlp1_3a_3acontrol_5fmodes_20_3e_14',['convert&lt; KMR::dxlP1::Control_modes &gt;',['../d8/dee/structYAML_1_1convert_3_01KMR_1_1dxlP1_1_1Control__modes_01_4.html',1,'YAML']]],
+  ['convert_3c_20kmr_3a_3adxlp1_3a_3adata_5fnode_20_3e_15',['convert&lt; KMR::dxlP1::Data_node &gt;',['../d9/dd4/structYAML_1_1convert_3_01KMR_1_1dxlP1_1_1Data__node_01_4.html',1,'YAML']]],
+  ['convert_3c_20kmr_3a_3adxlp1_3a_3amotor_5fnode_20_3e_16',['convert&lt; KMR::dxlP1::Motor_node &gt;',['../dc/d02/structYAML_1_1convert_3_01KMR_1_1dxlP1_1_1Motor__node_01_4.html',1,'YAML']]],
+  ['copyright_17',['Copyright',['../index.html#autotoc_md4',1,'']]],
+  ['create_20a_20robot_20object_18',['III. Create a Robot object',['../d4/da5/how-to-use.html#autotoc_md17',1,'']]],
+  ['create_20your_20robot_20class_19',['II. Create your Robot class',['../d4/da5/how-to-use.html#autotoc_md12',1,'']]],
+  ['current_20',['CURRENT',['../d1/d17/namespaceKMR_1_1dxlP1.html#a40a205c796dfae164e27441b42317c62a7770173898835c0954853cb16e8d284a',1,'KMR::dxlP1']]],
+  ['current_5fbased_5fposition_5fcontrol_21',['current_based_position_control',['../d5/dde/structKMR_1_1dxlP1_1_1Control__modes.html#af9997d07a081c87d5b10faa26d649f82',1,'KMR::dxlP1::Control_modes']]],
+  ['current_5fcontrol_22',['current_control',['../d5/dde/structKMR_1_1dxlP1_1_1Control__modes.html#ac093bb0f60ca9d76f86965bce38986af',1,'KMR::dxlP1::Control_modes']]],
+  ['cw_5fangle_5flimit_23',['CW_ANGLE_LIMIT',['../d1/d17/namespaceKMR_1_1dxlP1.html#a40a205c796dfae164e27441b42317c62a977e7e0f97bc9bd210e2ee47330d47ee',1,'KMR::dxlP1']]]
+];
